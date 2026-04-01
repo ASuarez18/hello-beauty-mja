@@ -1,0 +1,339 @@
+@use "sass:map";
+@use "variables" as *;
+
+.contact-page {
+	background-color: map.get($colors, l-neut-pale-w);
+	padding: map.get($spacing, sp-10) 0;
+	text-align: center;
+}
+
+// 1. Header Polish
+.contact-header {
+	margin-bottom: map.get($spacing, sp-8);
+
+	.main-title {
+		margin-bottom: 0;
+		font-family: map.get($fonts, heading);
+		font-size: map.get(map.get($text-styles, h1-cap), size);
+		font-weight: map.get($weights, light);
+		letter-spacing: 0.1em;
+		color: map.get($colors, bold-main);
+		text-transform: uppercase;
+	}
+
+	.line {
+		color: map.get($colors, accent);
+	}
+
+	.subtitle {
+		font-family: map.get($fonts, primary);
+		font-size: map.get(map.get($text-styles, body), size);
+		font-weight: map.get($weights, light);
+		color: map.get($colors, d-neut-black);
+		line-height: 1.6;
+		margin-top: map.get($spacing, sp-5);
+		margin-bottom: map.get($spacing, sp-7);
+	}
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	gap: map.get($spacing, sp-6);
+
+	a {
+		display: flex;
+		align-items: center;
+		gap: map.get($spacing, sp-2);
+		text-decoration: none;
+		font-family: map.get($fonts, primary);
+		font-size: map.get(map.get($text-styles, body), size);
+		font-weight: map.get($weights, light);
+		color: map.get($colors, bold-main);
+
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+
+.form-container {
+	background-color: map.get($colors, l-neut-pink);
+	max-width: 768px;
+	max-height: 1344px;
+	margin: map.get($spacing, sp-8) auto;
+	padding: 60px 80px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	h3 {
+		font-family: map.get($fonts, heading);
+		font-size: map.get(map.get($text-styles, h5), size);
+		font-weight: map.get($weights, regular);
+		color: map.get($colors, d-neut-black);
+		margin-bottom: map.get($spacing, sp-3);
+	}
+}
+
+// Tab Navigation
+.tab-nav {
+	display: flex;
+	border-bottom: 1px solid map.get($colors, d-neut-mid-g);
+	margin-bottom: map.get($spacing, sp-6);
+
+	.tab-btn {
+		flex: 1;
+		background: none;
+		border: none;
+		padding: map.get($spacing, sp-3) map.get($spacing, sp-8);
+		font-family: map.get($fonts, heading);
+		font-size: map.get(map.get($text-styles, h5), size);
+		cursor: pointer;
+		color: map.get($colors, d-neut-mid-g);
+
+		&.active {
+			color: map.get($colors, brand);
+			border-bottom: 2px solid map.get($colors, brand);
+		}
+	}
+}
+
+.form-section {
+	margin-bottom: map.get($spacing, sp-6);
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: map.get($spacing, sp-4);
+
+	@media (max-width: map.get($breakpoints, tablet)) {
+		grid-template-columns: 1fr;
+	}
+}
+
+// 2. Event Type Selection Polish
+.selection-group {
+	display: flex;
+	gap: map.get($spacing, sp-2);
+
+	.select-box {
+		margin: 0;
+		flex: 1;
+		background: #fff;
+		padding: 12px 16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid transparent;
+
+		input {
+			display: none;
+		}
+
+		span {
+			font-family: map.get($fonts, heading);
+			font-size: map.get(map.get($text-styles, button), size);
+			font-weight: map.get($weights, regular);
+			color: map.get($colors, d-neut-dark-g);
+			display: flex;
+			align-items: center;
+			width: 100%;
+			justify-content: space-between;
+		}
+
+		img {
+			width: 24px;
+			opacity: 0;
+			transition: map.get($transitions, default);
+		}
+
+		input:checked + span {
+			color: map.get($colors, brand);
+			img {
+				opacity: 1;
+			}
+		}
+		&:hover {
+			border: 1px solid map.get($colors, comp-dark-p);
+		}
+	}
+}
+
+.selection-group {
+	display: flex;
+	gap: map.get($spacing, sp-3);
+
+	.select-box {
+		flex: 1;
+		background: #fff;
+		padding: map.get($spacing, sp-3);
+		text-align: center;
+		border: 1px solid transparent;
+		cursor: pointer;
+		font-family: map.get($fonts, heading);
+		font-size: 18px;
+		color: map.get($colors, d-neut-mid-g);
+		transition: map.get($transitions, default);
+
+		input:checked + span {
+			color: map.get($colors, bold-main);
+		}
+	}
+}
+
+// 3. Phone Input Group Layout
+.phone-input-wrapper {
+	display: flex;
+	background: #fff;
+	border: 1px solid map.get($colors, d-neut-mid-g);
+	margin: map.get($spacing, sp-2) 0;
+
+	.country-select {
+		padding: 0 map.get($spacing, sp-3);
+		display: flex;
+		align-items: center;
+		border-right: 1px solid map.get($colors, d-neut-mid-g);
+		font-size: 14px;
+		color: map.get($colors, d-neut-dark-g);
+	}
+
+	.tel-input-field {
+		flex: 1;
+		border: none;
+		padding: map.get($spacing, sp-3);
+		font-size: 14px;
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.input-field {
+	width: 100%;
+	padding: map.get($spacing, sp-3);
+	border: 1px solid map.get($colors, d-neut-mid-g);
+	background-color: #fff;
+	font-family: map.get($fonts, primary);
+	font-size: map.get(map.get($text-styles, body-sm), size);
+	color: map.get($colors, d-neut-dark-g);
+
+	&::placeholder {
+		color: map.get($colors, d-neut-mid-g);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: map.get($colors, brand);
+	}
+}
+
+.checkbox-label {
+	display: flex;
+	align-items: center;
+	gap: map.get($spacing, sp-2);
+	margin-top: map.get($spacing, sp-2);
+	font-family: map.get($fonts, primary);
+	font-size: map.get(map.get($text-styles, body-sm), size);
+	color: map.get($colors, d-neut-dark-g);
+	cursor: pointer;
+
+	input {
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+	}
+}
+
+.contact-options {
+	display: flex;
+	flex-direction: column;
+	gap: map.get($spacing, sp-3);
+}
+
+.radio-group {
+	display: flex;
+	flex-direction: column;
+	gap: map.get($spacing, sp-3);
+}
+
+// 4. Radio Buttons
+.radio-label {
+	.radio-dot {
+		border: 1px solid map.get($colors, d-neut-mid-g);
+		&::after {
+			background-color: map.get($colors, bold-main);
+			width: 10px;
+			height: 10px;
+		}
+	}
+}
+
+.radio-label {
+	display: flex;
+	align-items: center;
+	gap: map.get($spacing, sp-3);
+	font-family: map.get($fonts, primary);
+	font-size: map.get(map.get($text-styles, body-sm), size);
+	color: map.get($colors, d-neut-dark-g);
+	cursor: pointer;
+
+	input {
+		display: none;
+	}
+
+	.radio-dot {
+		width: 24px;
+		height: 24px;
+		border: 2px solid map.get($colors, d-neut-mid-g);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		transition: map.get($transitions, default);
+
+		&::after {
+			content: "";
+			width: 12px;
+			height: 12px;
+			background-color: map.get($colors, accent);
+			border-radius: 50%;
+			opacity: 0;
+			transition: map.get($transitions, default);
+		}
+	}
+
+	input:checked ~ .radio-dot {
+		border-color: map.get($colors, accent);
+
+		&::after {
+			opacity: 1;
+		}
+	}
+}
+
+.tel-input {
+	margin: map.get($spacing, sp-2) 0 map.get($spacing, sp-3) 0;
+}
+
+.btn-next {
+	display: block;
+	width: 200px;
+	margin: map.get($spacing, sp-6) auto 0;
+	padding: map.get($spacing, sp-3);
+	background: none;
+	border: 1px solid map.get($colors, d-neut-dark-g);
+	font-family: map.get($fonts, primary);
+	font-size: map.get(map.get($text-styles, body-sm), size);
+	color: map.get($colors, d-neut-dark-g);
+	cursor: pointer;
+	transition: map.get($transitions, default);
+
+	&:hover {
+		background-color: map.get($colors, l-neut-pale-w);
+		border-color: map.get($colors, brand);
+	}
+}
