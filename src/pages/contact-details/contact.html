@@ -4,7 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contact Us | BC Beauty</title>
-		<link rel="stylesheet" href="../css/contact.css" />
+		<link rel="stylesheet" href="../../css/contact.css" />
+		<link rel="stylesheet" href="../../css/styles.css" />
 	</head>
 	<body>
 		<header class="header"></header>
@@ -20,18 +21,18 @@
 
 				<div class="social-links">
 					<a href="tel:+10000000000">
-						<img src="../assets/icons/contact-icons/phone.svg" alt="phone" /> +1
+						<img src="../../assets/icons/contact-icons/phone.svg" alt="phone" /> +1
 						0000000000
 					</a>
 					<a href="#">
 						<img
-							src="../assets/icons/contact-icons/whatsApp.svg"
+							src="../../assets/icons/contact-icons/whatsApp.svg"
 							alt="whatsApp"
 						/>
 						+1 0000000000
 					</a>
 					<a href="#">
-						<img src="../assets/icons/contact-icons/ig.svg" alt="ig" />
+						<img src="../../assets/icons/contact-icons/ig.svg" alt="ig" />
 						carlabeatrizs_
 					</a>
 				</div>
@@ -52,19 +53,19 @@
 							<label class="select-box">
 								<input type="radio" name="event_type" value="wedding" checked />
 								<span
-									>Wedding <img src="../assets/icons/check.svg" alt="check"
+									>Wedding <img src="../../assets/icons/check.svg" alt="check"
 								/></span>
 							</label>
 							<label class="select-box">
 								<input type="radio" name="event_type" value="party" />
 								<span
-									>Party <img src="../assets/icons/check.svg" alt="check"
+									>Party <img src="../../assets/icons/check.svg" alt="check"
 								/></span>
 							</label>
 							<label class="select-box">
 								<input type="radio" name="event_type" value="photoshoot" />
 								<span
-									>Photoshoot <img src="../assets/icons/check.svg" alt="check"
+									>Photoshoot <img src="../../assets/icons/check.svg" alt="check"
 								/></span>
 							</label>
 						</div>
@@ -74,17 +75,21 @@
 					<div class="form-row">
 						<div class="form-section">
 							<h3>Event Date</h3>
-							<input type="date" class="input-field" />
+							<input
+								type="date"
+								class="input-field date-input"
+								placeholder="Select Date"
+							/>
 							<label class="checkbox-label"
 								><input type="checkbox" /> Not decided</label
 							>
 						</div>
 						<div class="form-section">
 							<h3>Event Time</h3>
-							<select class="input-field">
-								<option>Full day</option>
-								<option>Morning</option>
-								<option>Afternoon</option>
+							<select class="input-field time-select">
+								<option value="">Full day</option>
+								<option value="morning">Morning</option>
+								<option value="afternoon">Afternoon</option>
 							</select>
 							<label class="checkbox-label"
 								><input type="checkbox" /> Not decided</label
@@ -175,6 +180,6 @@
 		<footer class="footer"></footer>
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="js/contact.js"></script>
+		<script src="../../scripts/contact.js"></script>
 	</body>
 </html>

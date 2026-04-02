@@ -107,10 +107,11 @@
 .form-row {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: map.get($spacing, sp-4);
+	gap: 40px;
 
 	@media (max-width: map.get($breakpoints, tablet)) {
 		grid-template-columns: 1fr;
+		gap: map.get($spacing, sp-4);
 	}
 }
 
@@ -162,88 +163,117 @@
 	}
 }
 
-.selection-group {
-	display: flex;
-	gap: map.get($spacing, sp-3);
-
-	.select-box {
-		flex: 1;
-		background: #fff;
-		padding: map.get($spacing, sp-3);
-		text-align: center;
-		border: 1px solid transparent;
-		cursor: pointer;
-		font-family: map.get($fonts, heading);
-		font-size: 18px;
-		color: map.get($colors, d-neut-mid-g);
-		transition: map.get($transitions, default);
-
-		input:checked + span {
-			color: map.get($colors, bold-main);
-		}
-	}
-}
-
-// 3. Phone Input Group Layout
-.phone-input-wrapper {
-	display: flex;
-	background: #fff;
-	border: 1px solid map.get($colors, d-neut-mid-g);
-	margin: map.get($spacing, sp-2) 0;
-
-	.country-select {
-		padding: 0 map.get($spacing, sp-3);
-		display: flex;
-		align-items: center;
-		border-right: 1px solid map.get($colors, d-neut-mid-g);
-		font-size: 14px;
-		color: map.get($colors, d-neut-dark-g);
-	}
-
-	.tel-input-field {
-		flex: 1;
-		border: none;
-		padding: map.get($spacing, sp-3);
-		font-size: 14px;
-		&:focus {
-			outline: none;
-		}
-	}
-}
-
+// 3. Date Input Fields Polish
 .input-field {
+	box-sizing: border-box;
 	width: 100%;
-	padding: map.get($spacing, sp-3);
+	height: 50px;
+	padding: 0 map.get($spacing, sp-3);
 	border: 1px solid map.get($colors, d-neut-mid-g);
 	background-color: #fff;
 	font-family: map.get($fonts, primary);
-	font-size: map.get(map.get($text-styles, body-sm), size);
-	color: map.get($colors, d-neut-dark-g);
+	font-size: 18px;
+	appearance: none;
+	cursor: pointer;
 
-	&::placeholder {
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	background-size: 24px;
+
+	// 1. Style for the initial Text/Placeholder state
+	&[type="text"] {
 		color: map.get($colors, d-neut-mid-g);
+		background-image: url("../assets/icons/calendar.svg");
+	}
+
+	// 2. Style for when it becomes a Date picker
+	&[type="date"] {
+		background-image: url("../assets/icons/calendar.svg");
+		color: map.get($colors, d-neut-black);
+
+		&::-webkit-calendar-picker-indicator {
+			opacity: 0;
+			cursor: pointer;
+		}
 	}
 
 	&:focus {
 		outline: none;
-		border-color: map.get($colors, brand);
+		border-color: map.get($colors, comp-dark-p);
 	}
 }
 
+.time-select {
+	box-sizing: border-box;
+	width: 100%;
+	height: 50px;
+	padding: 0 map.get($spacing, sp-3);
+	padding-right: 40px;
+	border: 1px solid map.get($colors, d-neut-mid-g);
+	background-color: #fff;
+	font-family: map.get($fonts, primary);
+	font-size: 18px;
+	appearance: none;
+	cursor: pointer;
+	background-image: url("../assets/icons/Select.svg");
+	background-repeat: no-repeat;
+	background-position: right 16px center;
+	background-size: 10px;
+
+	// Default color for the placeholder
+	color: map.get($colors, d-neut-mid-g);
+
+	// When the user selects a valid option, it turns black
+	&:valid {
+		color: map.get($colors, d-neut-black);
+	}
+
+	option {
+		color: map.get($colors, d-neut-black);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: map.get($colors, comp-dark-p);
+	}
+}
 .checkbox-label {
 	display: flex;
 	align-items: center;
-	gap: map.get($spacing, sp-2);
-	margin-top: map.get($spacing, sp-2);
+	gap: 12px;
+	margin-top: 10px;
 	font-family: map.get($fonts, primary);
-	font-size: map.get(map.get($text-styles, body-sm), size);
-	color: map.get($colors, d-neut-dark-g);
+	font-size: 18px;
+	color: map.get($colors, d-neut-black);
 	cursor: pointer;
 
-	input {
-		width: 20px;
-		height: 20px;
+	input[type="checkbox"] {
+		appearance: none;
+		-webkit-appearance: none;
+		width: 22px;
+		height: 22px;
+		border: 1px solid map.get($colors, d-neut-mid-g);
+		background-color: #fff;
 		cursor: pointer;
+		position: relative;
+		border-radius: 2px;
+
+		&:checked {
+			background-color: map.get($colors, accent);
+			border-color: map.get($colors, accent);
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 6px;
+				top: 2px;
+				width: 5px;
+				height: 10px;
+				border: solid white;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg);
+			}
+		}
 	}
 }
 

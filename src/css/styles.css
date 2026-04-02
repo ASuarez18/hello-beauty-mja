@@ -96,11 +96,12 @@
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 40px;
 }
 @media (max-width: 768px) {
   .form-row {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 }
 
@@ -146,81 +147,102 @@
   border: 1px solid #b99692;
 }
 
-.selection-group {
-  display: flex;
-  gap: 16px;
-}
-.selection-group .select-box {
-  flex: 1;
-  background: #fff;
-  padding: 16px;
-  text-align: center;
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-family: "Baskervville", serif;
-  font-size: 18px;
-  color: #a3a3a3;
-  transition: all 0.3s ease;
-}
-.selection-group .select-box input:checked + span {
-  color: #725a58;
-}
-
-.phone-input-wrapper {
-  display: flex;
-  background: #fff;
-  border: 1px solid #a3a3a3;
-  margin: 8px 0;
-}
-.phone-input-wrapper .country-select {
-  padding: 0 16px;
-  display: flex;
-  align-items: center;
-  border-right: 1px solid #a3a3a3;
-  font-size: 14px;
-  color: #535353;
-}
-.phone-input-wrapper .tel-input-field {
-  flex: 1;
-  border: none;
-  padding: 16px;
-  font-size: 14px;
-}
-.phone-input-wrapper .tel-input-field:focus {
-  outline: none;
-}
-
 .input-field {
+  box-sizing: border-box;
   width: 100%;
-  padding: 16px;
+  height: 50px;
+  padding: 0 16px;
   border: 1px solid #a3a3a3;
   background-color: #fff;
   font-family: "Montserrat", "Avenir", "Avenir Next", "Nunito Sans", sans-serif;
-  font-size: 16px;
-  color: #535353;
+  font-size: 18px;
+  appearance: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 24px;
 }
-.input-field::placeholder {
+.input-field[type=text] {
   color: #a3a3a3;
+  background-image: url("../assets/icons/calendar.svg");
+}
+.input-field[type=date] {
+  background-image: url("../assets/icons/calendar.svg");
+  color: #191919;
+}
+.input-field[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
 }
 .input-field:focus {
   outline: none;
-  border-color: #191919;
+  border-color: #b99692;
+}
+
+.time-select {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  padding-right: 40px;
+  border: 1px solid #a3a3a3;
+  background-color: #fff;
+  font-family: "Montserrat", "Avenir", "Avenir Next", "Nunito Sans", sans-serif;
+  font-size: 18px;
+  appearance: none;
+  cursor: pointer;
+  background-image: url("../assets/icons/Select.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 10px;
+  color: #a3a3a3;
+}
+.time-select:valid {
+  color: #191919;
+}
+.time-select option {
+  color: #191919;
+}
+.time-select:focus {
+  outline: none;
+  border-color: #b99692;
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 8px;
+  gap: 12px;
+  margin-top: 10px;
   font-family: "Montserrat", "Avenir", "Avenir Next", "Nunito Sans", sans-serif;
-  font-size: 16px;
-  color: #535353;
+  font-size: 18px;
+  color: #191919;
   cursor: pointer;
 }
-.checkbox-label input {
-  width: 20px;
-  height: 20px;
+.checkbox-label input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #a3a3a3;
+  background-color: #fff;
   cursor: pointer;
+  position: relative;
+  border-radius: 2px;
+}
+.checkbox-label input[type=checkbox]:checked {
+  background-color: #e3b6b1;
+  border-color: #e3b6b1;
+}
+.checkbox-label input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .contact-options {
@@ -303,6 +325,14 @@
 .btn-next:hover {
   background-color: #f8f6f4;
   border-color: #191919;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
