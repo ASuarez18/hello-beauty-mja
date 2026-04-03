@@ -381,6 +381,99 @@
 					<!--! Party Fields -->
 					<!-- Step1: Party Fields -->
 					<div id="party-step-1" class="dynamic-section" style="display: none">
+						<div class="form-row">
+							<div class="form-section">
+								<h3>Event Date</h3>
+								<input
+									type="text"
+									class="input-field date-input"
+									placeholder="Select Date"
+									onfocus="this.type = 'date'"
+									onblur="
+										if (this.value == '') {
+											this.type = 'text';
+										}
+									"
+									required
+								/>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Not decided</label
+								>
+							</div>
+							<div class="form-section">
+								<h3>Event Time</h3>
+								<select class="input-field time-select" required>
+									<option value="" disabled selected hidden>Full day</option>
+									<option value="morning">Morning</option>
+									<option value="afternoon">Afternoon</option>
+								</select>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Not decided</label
+								>
+							</div>
+						</div>
+
+						<div class="form-section">
+							<h3>Name</h3>
+							<input
+								type="text"
+								placeholder="Your name"
+								class="input-field name-input"
+							/>
+						</div>
+
+						<div class="form-section">
+							<textarea
+								class="input-field textarea-field"
+								rows="4"
+								placeholder="Tell us more about the party..."
+							></textarea>
+						</div>
+
+						<div class="form-section">
+							<h3>Contact</h3>
+							<div class="contact-options">
+								<label class="radio-label">
+									<input
+										type="radio"
+										name="party_contact_method"
+										value="call"
+										checked
+									/>
+									<span class="radio-dot"></span>
+									<span>Call</span>
+								</label>
+								<input
+									type="tel"
+									placeholder="+1 Your mobile number"
+									class="input-field tel-input"
+								/>
+								<label class="radio-label">
+									<input
+										type="radio"
+										name="party_contact_method"
+										value="whatsapp"
+									/>
+									<span class="radio-dot"></span>
+									<span>WhatsApp</span>
+								</label>
+								<label class="radio-label">
+									<input type="radio" name="party_contact_method" value="sms" />
+									<span class="radio-dot"></span>
+									<span>SMS</span>
+								</label>
+								<label class="radio-label">
+									<input
+										type="radio"
+										name="party_contact_method"
+										value="email"
+									/>
+									<span class="radio-dot"></span>
+									<span>Email</span>
+								</label>
+							</div>
+						</div>
+
 						<button type="button" class="btn-next">Next</button>
 					</div>
 
