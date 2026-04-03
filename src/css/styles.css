@@ -53,7 +53,6 @@
 .form-container {
   background-color: #fae9e7;
   max-width: 768px;
-  max-height: 1344px;
   margin: 96px auto;
   padding: 60px 80px;
   text-align: left;
@@ -162,21 +161,23 @@
   background-position: right 16px center;
   background-size: 24px;
 }
-.input-field[type=text] {
-  color: #a3a3a3;
-  background-image: url("../assets/icons/calendar.svg");
-}
-.input-field[type=date] {
-  background-image: url("../assets/icons/calendar.svg");
-  color: #191919;
-}
-.input-field[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  cursor: pointer;
-}
 .input-field:focus {
   outline: none;
   border-color: #b99692;
+}
+
+.date-input[type=date] {
+  color: #a3a3a3;
+  background-image: url("../assets/icons/calendar.svg");
+}
+
+.date-input[type=date] {
+  background-image: url("../assets/icons/calendar.svg");
+  color: #191919;
+}
+.date-input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
 }
 
 .time-select {
@@ -236,10 +237,10 @@
 .checkbox-label input[type=checkbox]:checked::after {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 11px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
@@ -321,10 +322,12 @@
   color: #535353;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 .btn-next:hover {
-  background-color: #f8f6f4;
-  border-color: #191919;
+  background-color: #b99692;
+  border-color: #b99692;
+  color: #fff;
 }
 
 *,

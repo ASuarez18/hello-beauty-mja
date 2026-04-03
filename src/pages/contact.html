@@ -39,7 +39,7 @@
 			</section>
 
 			<!--   Select Type   -->
-			<secStion class="form-container">
+			<section class="form-container">
 				<div class="tab-nav">
 					<button class="tab-btn active">Services</button>
 					<button class="tab-btn">Classes</button>
@@ -72,15 +72,23 @@
 					</div>
 
 					<!--! Wedding Fields -->
-					<div id="wedding-fields" class="dynamic-section">
+					<!-- Step 1 Wedding -->
+					<div id="step-1-wedding" class="dynamic-section">
 						<!-- Event Date & Time -->
 						<div class="form-row">
 							<div class="form-section">
 								<h3>Event Date</h3>
 								<input
-									type="date"
+									type="text"
 									class="input-field date-input"
 									placeholder="Select Date"
+									onfocus="this.type = 'date'"
+									onblur="
+										if (this.value == '') {
+											this.type = 'text';
+										}
+									"
+									required
 								/>
 								<label class="checkbox-label"
 									><input type="checkbox" /> Not decided</label
@@ -102,7 +110,11 @@
 						<!-- Name -->
 						<div class="form-section">
 							<h3>Name</h3>
-							<input type="text" placeholder="Your name" class="input-field" />
+							<input
+								type="text"
+								placeholder="Your name"
+								class="input-field name-input"
+							/>
 						</div>
 
 						<!-- Contact Type -->
@@ -173,8 +185,225 @@
 								</label>
 							</div>
 						</div>
+						<button type="button" class="btn-next" id="btn-to-step-2">
+							Next
+						</button>
+					</div>
 
+					<!-- Step 2: Wedding Fields -->
+					<div id="step-2-wedding" style="display: none">
+						<button type="button" class="btn-back">< Back</button>
 
+						<div class="form-section">
+							<h3>Bridal Service</h3>
+							<div class="selection-group">
+								<label class="select-box">
+									<input type="checkbox" name="bridal_service" value="makeup" />
+									<span
+										>Makeup <img src="../assets/icons/check.svg" alt="check"
+									/></span>
+								</label>
+								<label class="select-box">
+									<input type="checkbox" name="bridal_service" value="hair" />
+									<span
+										>Hair <img src="../assets/icons/check.svg" alt="check"
+									/></span>
+								</label>
+							</div>
+						</div>
+
+						<div class="form-section">
+							<h3>Event Location</h3>
+							<div class="contact-options">
+								<label class="radio-label">
+									<input
+										type="radio"
+										name="event_location"
+										value="not_decided"
+										checked
+									/>
+									<span class="radio-dot"></span>
+									<span>Not decided</span>
+								</label>
+								<label class="radio-label">
+									<input type="radio" name="event_location" value="in_studio" />
+									<span class="radio-dot"></span>
+									<span>In studio</span>
+								</label>
+							</div>
+							<input
+								type="text"
+								placeholder="Your location"
+								class="input-field location-input"
+							/>
+						</div>
+
+						<div class="form-section">
+							<h3>Premium service</h3>
+							<div class="premium-grid">
+								<label class="checkbox-label"
+									><input type="checkbox" /> Deep skin cleaning</label
+								>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Bleach body hair</label
+								>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Hydromassage</label
+								>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Hair blowout</label
+								>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Waxing</label
+								>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Foot and hand SPA</label
+								>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Relaxing massage</label
+								>
+								<label class="checkbox-label"
+									><input type="checkbox" /> Camouflage (body exfoliation and
+									hydration)</label
+								>
+							</div>
+						</div>
+
+						<div class="form-section">
+							<h3>Anyone else need services?</h3>
+							<div class="guest-services-container">
+								<div class="guest-row">
+									<span class="guest-type">Women</span>
+									<div class="counter">
+										<button type="button" class="btn-minus">-</button>
+										<input
+											type="number"
+											value="0"
+											min="0"
+											class="counter-input"
+											readonly
+										/>
+										<button type="button" class="btn-plus">+</button>
+									</div>
+									<div class="guest-options">
+										<label class="checkbox-label"
+											><input type="checkbox" /> Makeup</label
+										>
+										<label class="checkbox-label"
+											><input type="checkbox" /> Hair</label
+										>
+									</div>
+								</div>
+
+								<div class="guest-row">
+									<span class="guest-type">Men</span>
+									<div class="counter">
+										<button type="button" class="btn-minus">-</button>
+										<input
+											type="number"
+											value="0"
+											min="0"
+											class="counter-input"
+											readonly
+										/>
+										<button type="button" class="btn-plus">+</button>
+									</div>
+									<div class="guest-options">
+										<label class="checkbox-label"
+											><input type="checkbox" /> Makeup</label
+										>
+										<label class="checkbox-label"
+											><input type="checkbox" /> Hair</label
+										>
+									</div>
+								</div>
+
+								<div class="guest-row">
+									<span class="guest-type">Bridesmaid</span>
+									<div class="counter">
+										<button type="button" class="btn-minus">-</button>
+										<input
+											type="number"
+											value="0"
+											min="0"
+											class="counter-input"
+											readonly
+										/>
+										<button type="button" class="btn-plus">+</button>
+									</div>
+									<div class="guest-options">
+										<label class="checkbox-label"
+											><input type="checkbox" /> Makeup</label
+										>
+										<label class="checkbox-label"
+											><input type="checkbox" /> Hair</label
+										>
+									</div>
+								</div>
+
+								<div class="guest-row">
+									<span class="guest-type">Flower girl</span>
+									<div class="counter">
+										<button type="button" class="btn-minus">-</button>
+										<input
+											type="number"
+											value="0"
+											min="0"
+											class="counter-input"
+											readonly
+										/>
+										<button type="button" class="btn-plus">+</button>
+									</div>
+									<div class="guest-options">
+										<label class="checkbox-label"
+											><input type="checkbox" /> Makeup</label
+										>
+										<label class="checkbox-label"
+											><input type="checkbox" /> Hair</label
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-section">
+							<h3>Anything you want us to know?</h3>
+							<textarea
+								class="input-field textarea-field"
+								rows="4"
+								placeholder="Type here..."
+							></textarea>
+						</div>
+
+						<button type="submit" class="btn-submit">Submit</button>
+					</div>
+
+					<!-- Step 2: Party Photo Fields -->
+
+					<div id="step-2-party-photo" style="display: none">
+						<button type="button" class="btn-back">< Back</button>
+
+						<div class="form-section">
+							<h3>Service</h3>
+						</div>
+
+						<button type="submit" class="btn-submit">Submit</button>
+					</div>
+
+					<!-- Thank You Screen -->
+					<div id="thank-you-screen" style="display: none; text-align: center">
+						<h2>
+							Thanks <span id="userNameDisplay">Name</span>, <br />
+							we will contact you soon!
+						</h2>
+						<p>
+							We will call at <span id="userTimeDisplay">time</span> to confirm
+							the appointment details with you.
+						</p>
+
+						<div class="receipt-card"></div>
+
+						<button type="button" class="btn-home">Home</button>
 					</div>
 
 					<!--! Party Fields -->
@@ -190,8 +419,6 @@
 						class="dynamic-section"
 						style="display: none"
 					></div>
-					
-        <button type="submit" class="btn-next">Next</button>
 				</form>
 			</section>
 		</main>

@@ -61,7 +61,6 @@
 .form-container {
 	background-color: map.get($colors, l-neut-pink);
 	max-width: 768px;
-	max-height: 1344px;
 	margin: map.get($spacing, sp-8) auto;
 	padding: 60px 80px;
 	text-align: left;
@@ -180,26 +179,25 @@
 	background-position: right 16px center;
 	background-size: 24px;
 
-	// 1. Style for the initial Text/Placeholder state
-	&[type="text"] {
-		color: map.get($colors, d-neut-mid-g);
-		background-image: url("../assets/icons/calendar.svg");
-	}
-
-	// 2. Style for when it becomes a Date picker
-	&[type="date"] {
-		background-image: url("../assets/icons/calendar.svg");
-		color: map.get($colors, d-neut-black);
-
-		&::-webkit-calendar-picker-indicator {
-			opacity: 0;
-			cursor: pointer;
-		}
-	}
-
 	&:focus {
 		outline: none;
 		border-color: map.get($colors, comp-dark-p);
+	}
+}
+
+// 1. Style for the initial Text/Placeholder state
+.date-input[type="date"] {
+	color: map.get($colors, d-neut-mid-g);
+	background-image: url("../assets/icons/calendar.svg");
+}
+
+.date-input[type="date"] {
+	background-image: url("../assets/icons/calendar.svg");
+	color: map.get($colors, d-neut-black);
+
+	&::-webkit-calendar-picker-indicator {
+		opacity: 0;
+		cursor: pointer;
 	}
 }
 
@@ -265,10 +263,10 @@
 			&::after {
 				content: "";
 				position: absolute;
-				left: 6px;
-				top: 2px;
-				width: 5px;
-				height: 10px;
+				left: 7px;
+				top: 3px;
+				width: 6px;
+				height: 11px;
 				border: solid white;
 				border-width: 0 2px 2px 0;
 				transform: rotate(45deg);
@@ -361,9 +359,11 @@
 	color: map.get($colors, d-neut-dark-g);
 	cursor: pointer;
 	transition: map.get($transitions, default);
+	box-sizing: border-box;
 
 	&:hover {
-		background-color: map.get($colors, l-neut-pale-w);
-		border-color: map.get($colors, brand);
+		background-color: map.get($colors, comp-dark-p);
+		border-color: map.get($colors, comp-dark-p);
+		color: #fff;
 	}
 }
