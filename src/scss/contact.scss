@@ -9,6 +9,9 @@
 
 // 1. Header Polish
 .contact-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	margin-bottom: map.get($spacing, sp-8);
 
 	.main-title {
@@ -22,7 +25,9 @@
 	}
 
 	.line {
-		color: map.get($colors, accent);
+		border: 0.5px solid map.get($colors, accent);
+		width: 200px;
+		margin-top: map.get($spacing, sp-5);
 	}
 
 	.subtitle {
@@ -495,14 +500,143 @@
 	}
 }
 
-// Textarea (Anything you want us to know?)
 .textarea-field {
-	height: auto; // Overrides the 50px height set on .input-field
-	resize: vertical; // Lets the user drag it taller, but not wider
+	height: auto;
+	resize: vertical;
 	padding-top: map.get($spacing, sp-3);
 }
 
-// Submit Button (Copies your Next button styling)
 .btn-submit {
 	@extend .btn-next;
+}
+
+// ==========================================
+// 6. Thank You Screen Styling
+// ==========================================
+
+#thank-you-screen {
+	padding-top: map.get($spacing, sp-6);
+	padding-bottom: map.get($spacing, sp-6);
+}
+
+// Titles and text outside the card
+.thank-you-title {
+	font-family: map.get($fonts, heading);
+	font-size: 40px;
+	color: map.get($colors, bold-main);
+	margin-bottom: map.get($spacing, sp-3);
+	line-height: 1.2;
+}
+
+.thank-you-subtitle {
+	font-family: map.get($fonts, primary);
+	font-size: 16px;
+	color: map.get($colors, d-neut-dark-g);
+	margin-bottom: map.get($spacing, sp-6);
+	line-height: 1.5;
+
+	.edit-details-link {
+		display: inline-block;
+		margin-top: map.get($spacing, sp-2);
+		color: map.get($colors, d-neut-dark-g);
+		text-decoration: underline;
+		font-size: 14px;
+		transition: map.get($transitions, default);
+
+		&:hover {
+			color: map.get($colors, accent);
+		}
+	}
+}
+
+// The Receipt Summary Card
+.receipt-card {
+	background-color: #fff;
+	max-width: 480px;
+	margin: 0 auto map.get($spacing, sp-8);
+	padding: map.get($spacing, sp-6) map.get($spacing, sp-8);
+	border: 1px solid map.get($colors, d-neut-mid-g);
+	text-align: left; // Overrides the center alignment from the parent container
+
+	.receipt-header {
+		margin-bottom: map.get($spacing, sp-4);
+
+		h4 {
+			font-family: map.get($fonts, heading);
+			font-size: 24px;
+			color: map.get($colors, bold-main);
+			border-bottom: 1px solid map.get($colors, d-neut-mid-g);
+			padding-bottom: map.get($spacing, sp-2);
+		}
+	}
+
+	.receipt-price {
+		background-color: map.get($colors, l-neut-pale-w);
+		padding: map.get($spacing, sp-4);
+		text-align: center;
+		margin-bottom: map.get($spacing, sp-5);
+
+		p {
+			font-family: map.get($fonts, primary);
+			font-size: 14px;
+			color: map.get($colors, d-neut-dark-g);
+			margin-bottom: map.get($spacing, sp-1);
+		}
+
+		h3 {
+			font-family: map.get($fonts, heading);
+			font-size: 28px;
+			color: map.get($colors, d-neut-black);
+		}
+	}
+
+	.receipt-details {
+		.detail-block {
+			margin-bottom: map.get($spacing, sp-4);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			h5 {
+				font-family: map.get($fonts, primary);
+				font-size: 14px;
+				font-weight: map.get(
+					$weights,
+					bold
+				); // Assuming you have bold in your weights map
+				color: map.get($colors, d-neut-dark-g);
+				margin-bottom: map.get($spacing, sp-1);
+			}
+
+			p,
+			ul {
+				font-family: map.get($fonts, primary);
+				font-size: 16px;
+				color: map.get($colors, d-neut-black);
+			}
+
+			// Custom bullet points for the services list
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+
+				li {
+					margin-bottom: 4px;
+
+					&::before {
+						content: "- ";
+						color: map.get($colors, d-neut-black);
+					}
+				}
+			}
+		}
+	}
+}
+
+// Home Button
+.btn-home {
+	@extend .btn-next; // Reuses the exact same styling as the Next/Submit buttons
+	margin: 0 auto; // Ensures it stays perfectly centered at the bottom
 }

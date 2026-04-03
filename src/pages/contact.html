@@ -13,7 +13,7 @@
 		<main class="contact-page">
 			<section class="contact-header">
 				<h1 class="main-title">CONTACT</h1>
-				<p class="line">__________________________</p>
+				<div class="line"></div>
 				<p class="subtitle">
 					Get a quote and book a free consultation for your <br />
 					special day or our academy services
@@ -191,7 +191,11 @@
 					</div>
 
 					<!-- Step 2: Wedding Fields -->
-					<div id="step-2-wedding" style="display: none">
+					<div
+						class="dynamic-section"
+						id="step-2-wedding"
+						style="display: none"
+					>
 						<button type="button" class="btn-back">< Back</button>
 
 						<div class="form-section">
@@ -270,10 +274,10 @@
 						</div>
 
 						<div class="form-section">
-							<h3>Anyone else need services?</h3>
+							<h3>Anyone else need service?</h3>
 							<div class="guest-services-container">
 								<div class="guest-row">
-									<span class="guest-type">Women</span>
+									<span class="guest-type">Groom</span>
 									<div class="counter">
 										<button type="button" class="btn-minus">-</button>
 										<input
@@ -285,35 +289,10 @@
 										/>
 										<button type="button" class="btn-plus">+</button>
 									</div>
-									<div class="guest-options">
+									<div class="separator"></div>
+									<div class="guest-options groom-options">
 										<label class="checkbox-label"
 											><input type="checkbox" /> Makeup</label
-										>
-										<label class="checkbox-label"
-											><input type="checkbox" /> Hair</label
-										>
-									</div>
-								</div>
-
-								<div class="guest-row">
-									<span class="guest-type">Men</span>
-									<div class="counter">
-										<button type="button" class="btn-minus">-</button>
-										<input
-											type="number"
-											value="0"
-											min="0"
-											class="counter-input"
-											readonly
-										/>
-										<button type="button" class="btn-plus">+</button>
-									</div>
-									<div class="guest-options">
-										<label class="checkbox-label"
-											><input type="checkbox" /> Makeup</label
-										>
-										<label class="checkbox-label"
-											><input type="checkbox" /> Hair</label
 										>
 									</div>
 								</div>
@@ -331,12 +310,13 @@
 										/>
 										<button type="button" class="btn-plus">+</button>
 									</div>
+									<div class="separator"></div>
 									<div class="guest-options">
 										<label class="checkbox-label"
-											><input type="checkbox" /> Makeup</label
+											><input type="checkbox" /> Hairstyle</label
 										>
 										<label class="checkbox-label"
-											><input type="checkbox" /> Hair</label
+											><input type="checkbox" /> Makeup</label
 										>
 									</div>
 								</div>
@@ -354,12 +334,13 @@
 										/>
 										<button type="button" class="btn-plus">+</button>
 									</div>
+									<div class="separator"></div>
 									<div class="guest-options">
 										<label class="checkbox-label"
-											><input type="checkbox" /> Makeup</label
+											><input type="checkbox" /> Hairstyle</label
 										>
 										<label class="checkbox-label"
-											><input type="checkbox" /> Hair</label
+											><input type="checkbox" /> Makeup</label
 										>
 									</div>
 								</div>
