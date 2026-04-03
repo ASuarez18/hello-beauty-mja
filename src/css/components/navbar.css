@@ -6,22 +6,22 @@ TODOs
 - Margin 
 
 */
-nav {
+#navbar {
   margin: 40px 0 0 0;
   padding: 0;
   background-color: transparent;
   position: sticky;
   top: 40px;
 }
-nav ul {
+#navbar ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav ul li {
+#navbar ul li {
   list-style: none;
 }
-nav ul li a {
+#navbar ul li a {
   text-decoration: none;
   color: #725a58;
   font-size: 20px;
@@ -31,17 +31,17 @@ nav ul li a {
   border-right: 2px solid #a06d67;
   transition: all 0.3s ease;
 }
-nav ul li a img {
+#navbar ul li a img {
   width: 30px;
   height: 30px;
 }
-nav ul li a:hover {
+#navbar ul li a:hover {
   text-decoration: underline;
 }
-nav ul li:last-child a, nav ul li:nth-child(4) a {
+#navbar ul li:last-child a, #navbar ul li:nth-child(4) a {
   border-right: none;
 }
-nav ul li img:not(a) {
+#navbar ul li img:not(a) {
   max-width: 110px;
 }
 
