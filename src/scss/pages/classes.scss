@@ -1,9 +1,152 @@
-*, *::before, *::after {
+@use "../variables" as vr;
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  height: 200vh;
+  background-color: map-get($map: vr.$colors, $key: l-neut-pale-w);
+
+  // * Header
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 40px 0;
+
+    h1 {
+      font-family: map-get($map: vr.$fonts, $key: heading);
+      font-size: map-get($map: vr.$text-sizes, $key: h1);
+      font-weight: map-get($map: vr.$weights, $key: medium);
+      color: map-get($map: vr.$colors, $key: bold-main);
+    }
+
+    hr {
+      width: 15%;
+      border-top: 1px solid map-get($map: vr.$colors, $key: accent);
+      border-bottom: 1px solid map-get($map: vr.$colors, $key: accent);
+      background-color: transparent;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-family: map-get($map: vr.$fonts, $key: primary);
+      font-size: map-get($map: vr.$text-sizes, $key: body);
+      color: map-get($map: vr.$colors, $key: brand);
+      line-height: 30px;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 40px 0;
+
+    background-color: map-get($map: vr.$colors, $key: l-neut-pink);
+
+    .class {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      width: 75%;
+
+      .class-image {
+        width: 328px;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .info-class {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        h2 {
+          font-family: map-get($map: vr.$fonts, $key: heading);
+          font-size: map-get($map: vr.$text-sizes, $key: h4);
+          font-weight: map-get($map: vr.$weights, $key: medium);
+          color: map-get($map: vr.$colors, $key: bold-main);
+          margin-bottom: 20px;
+        }
+
+        .details-class {
+          display: flex;
+          flex-direction: row;
+          gap: 30px;
+          margin-bottom: 20px;
+
+          .detail {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-family: map-get($map: vr.$fonts, $key: primary);
+            font-size: map-get($map: vr.$text-sizes, $key: body);
+            color: map-get($map: vr.$colors, $key: brand);
+            font-weight: map-get($map: vr.$weights, $key: light);
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        h3 {
+          font-family: map-get($map: vr.$fonts, $key: primary);
+          font-size: map-get($map: vr.$text-sizes, $key: h6);
+          color: map-get($map: vr.$colors, $key: brand);
+          font-weight: map-get($map: vr.$weights, $key: light);
+          // margin-bottom: 5px;
+        }
+
+        p {
+          &:first-of-type {
+            margin-bottom: 20px;
+          }
+          &:last-of-type {
+            font-family: map-get($map: vr.$fonts, $key: primary);
+            font-size: map-get($map: vr.$text-sizes, $key: body);
+            font-weight: map-get($map: vr.$weights, $key: light);
+            color: map-get($map: vr.$colors, $key: brand);
+            line-height: 25px;
+          }
+        }
+
+        ul {
+          margin-bottom: 20px;
+          li {
+            list-style-position: inside;
+            margin-left: 5px;
+
+            color: map-get($map: vr.$colors, $key: brand);
+            font-family: map-get($map: vr.$fonts, $key: primary);
+            font-size: map-get($map: vr.$text-sizes, $key: body);
+            font-weight: map-get($map: vr.$weights, $key: light);
+            line-height: 25px;
+          }
+        }
+
+        a {
+          border: 1px solid map-get($map: vr.$colors, $key: bold-main);
+          color: map-get($map: vr.$colors, $key: bold-main);
+          text-decoration: none;
+          font-size: map-get($map: vr.$text-sizes, $key: button);
+          padding: 20px 30px;
+          width: fit-content;
+          transition: map-get($map: vr.$transitions, $key: default);
+
+          &:hover {
+            background-color: map-get($map: vr.$colors, $key: bold-main);
+            color: map-get($map: vr.$colors, $key: l-neut-pale-w);
+          }
+        }
+      }
+    }
+  }
 }

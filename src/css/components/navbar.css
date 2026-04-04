@@ -7,11 +7,10 @@ TODOs
 
 */
 #navbar {
-  margin: 40px 0 0 0;
-  padding: 0;
-  background-color: transparent;
+  padding: 40px 0 0 0;
+  background-color: #f8f6f4;
   position: sticky;
-  top: 40px;
+  top: 0px;
 }
 #navbar ul {
   display: flex;
