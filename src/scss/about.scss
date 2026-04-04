@@ -11,16 +11,21 @@
   margin-bottom: map.get($spacing, sp-7);
 
   h2 {
-    font-family: map.get($fonts, primary);
-    font-size: map.get(map.get($text-styles, caption), size);
-    letter-spacing: 3px;
-    color: map.get($colors, d-neut-mid-g);
+    font-family: map.get($fonts, heading);
+    font-size: 48px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: map.get($colors, accent);
     margin-bottom: map.get($spacing, sp-2);
   }
 
   h1 {
     font-family: map.get($fonts, heading);
-    font-size: map.get(map.get($text-styles, h4), size);
+    font-size: 80px;
+    line-height: 1.3;
+    font-weight: 400;
+    letter-spacing: 13px;
     color: map.get($colors, bold-main);
   }
 }
@@ -36,7 +41,7 @@
 .about__container {
   display: flex;
   gap: map.get($spacing, sp-6);
-  max-width: 1100px;
+  max-width: 900px;
   width: 100%;
   align-items: flex-start;
 }
@@ -55,28 +60,33 @@
 
   h3 {
     font-family: map.get($fonts, heading);
-    font-size: map.get(map.get($text-styles, h5), size);
-    // line-height: map.get(map.get($text-styles, h5), line);
-    margin-bottom: map.get($spacing, sp-4);
-    color: map.get($colors, brand);
+    font-size: map.get(map.get($text-styles, h3), size);
+
+    line-height: 1.3;
+
+    font-weight: map.get($weights, regular);
+    color: map.get($colors, bold-main);
+    max-width: 604px;
     word-break: keep-all;
   }
 
   p {
     font-family: map.get($fonts, primary);
-    font-size: map.get(map.get($text-styles, body), size);
-    // line-height: map.get(map.get($text-styles, body), line);
+    font-size: 18px;
+    line-height: 1.5;
     font-weight: map.get($weights, light);
-    color: map.get($colors, d-neut-dark-g);
+    color: #000000;
     margin-bottom: map.get($spacing, sp-5);
   }
 
   button {
+    font-family: map.get($fonts, heading);
     padding: map.get($spacing, sp-2) map.get($spacing, sp-5);
-    border: 1px solid map.get($colors, brand);
+    border: 1px solid #5E4A49;
     background: transparent;
     cursor: pointer;
     transition: map.get($transitions, default);
+    color: #5E4A49;
 
     &:hover {
       background: map.get($colors, brand);
@@ -90,21 +100,36 @@
   text-align: center;
   padding: map.get($spacing, sp-7) map.get($spacing, sp-4);
 
-  h4 {
+  h3 {
     font-family: map.get($fonts, heading);
+    font-size: map.get(map.get($text-styles, h3), size);
+    font-weight: map.get($weights, regular);
+    letter-spacing: 0px;
     margin-bottom: map.get($spacing, sp-6);
-    color: map.get($colors, brand);
+    color: map.get($colors, bold-main);
   }
 }
 
 .brands {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: map.get($spacing, sp-5);
-  flex-wrap: wrap;
+
+  max-width: 904px;
+  margin: 0 auto;
+
+  justify-items: center;
+  align-items: center;
 
   img {
-    height: 30px;
+    width: 120px;
+    height: 40px;
+    object-fit: contain;
     opacity: 0.7;
+  }
+
+  img:nth-child(7) {
+  transform: scale(1.3);
+  margin-top: 4px;
   }
 }
