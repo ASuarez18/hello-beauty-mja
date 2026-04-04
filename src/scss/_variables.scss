@@ -24,8 +24,8 @@ $colors: (
 
 // ? Font variables
 $fonts: (
-  primary: 'Nunito Sans', sans-serif,
-  heading: 'Baskervville', serif
+  primary: ('Nunito Sans', sans-serif),
+  heading: (Baskervville, serif)
 );
 // ? Text sizes variables
 $text-styles: (

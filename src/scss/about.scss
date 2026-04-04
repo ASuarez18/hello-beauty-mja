@@ -1,0 +1,110 @@
+@use './variables' as *;
+@use 'sass:map';
+
+.about {
+  padding: map.get($spacing, sp-7) map.get($spacing, sp-4);
+}
+
+// header
+.about__header {
+  text-align: center;
+  margin-bottom: map.get($spacing, sp-7);
+
+  h2 {
+    font-family: map.get($fonts, primary);
+    font-size: map.get(map.get($text-styles, caption), size);
+    letter-spacing: 3px;
+    color: map.get($colors, d-neut-mid-g);
+    margin-bottom: map.get($spacing, sp-2);
+  }
+
+  h1 {
+    font-family: map.get($fonts, heading);
+    font-size: map.get(map.get($text-styles, h4), size);
+    color: map.get($colors, bold-main);
+  }
+}
+
+// main section
+.about__main {
+  background: map.get($colors, l-neut-pink);
+  padding: map.get($spacing, sp-7) map.get($spacing, sp-4);
+  display: flex;
+  justify-content: center;
+}
+
+.about__container {
+  display: flex;
+  gap: map.get($spacing, sp-6);
+  max-width: 1100px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+// image
+.about__image img {
+  width: 100%;
+  max-width: 400px;
+  flex: 1;
+}
+
+// content
+.about__content {
+  max-width: 500px;
+  flex: 1;
+
+  h3 {
+    font-family: map.get($fonts, heading);
+    font-size: map.get(map.get($text-styles, h5), size);
+    // line-height: map.get(map.get($text-styles, h5), line);
+    margin-bottom: map.get($spacing, sp-4);
+    color: map.get($colors, brand);
+    word-break: keep-all;
+  }
+
+  p {
+    font-family: map.get($fonts, primary);
+    font-size: map.get(map.get($text-styles, body), size);
+    // line-height: map.get(map.get($text-styles, body), line);
+    font-weight: map.get($weights, light);
+    color: map.get($colors, d-neut-dark-g);
+    margin-bottom: map.get($spacing, sp-5);
+  }
+
+  button {
+    padding: map.get($spacing, sp-2) map.get($spacing, sp-5);
+    border: 1px solid map.get($colors, brand);
+    background: transparent;
+    cursor: pointer;
+    transition: map.get($transitions, default);
+
+    &:hover {
+      background: map.get($colors, brand);
+      color: #fff;
+    }
+  }
+}
+
+// brands
+.about__brands {
+  text-align: center;
+  padding: map.get($spacing, sp-7) map.get($spacing, sp-4);
+
+  h4 {
+    font-family: map.get($fonts, heading);
+    margin-bottom: map.get($spacing, sp-6);
+    color: map.get($colors, brand);
+  }
+}
+
+.brands {
+  display: flex;
+  justify-content: center;
+  gap: map.get($spacing, sp-5);
+  flex-wrap: wrap;
+
+  img {
+    height: 30px;
+    opacity: 0.7;
+  }
+}
