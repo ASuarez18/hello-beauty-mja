@@ -1,0 +1,120 @@
+@use './variables' as *;
+@use 'sass:map';
+
+.portfolio {
+  padding-bottom: 120px;
+
+  &__header {
+    text-align: center;
+    padding: 120px 20px 60px;
+
+    h1 {
+      font-family: map.get($fonts, heading);
+      font-size: 80px;
+      letter-spacing: 0.13em;
+      color: map.get($colors, bold-main);
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+}
+
+.portfolio__tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+
+  .tab-btn {
+    background: none;
+    border: none;
+    font-family: map.get($fonts, heading);
+    font-size: 24px;
+    color: map.get($colors, bold-main);
+    cursor: pointer;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+
+    &.active {
+      border-bottom-color: map.get($colors, bold-main);
+      font-weight: 700;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .tab-divider {
+    font-family: map.get($fonts, heading);
+    font-size: 24px;
+    color: map.get($colors, bold-main);
+  }
+}
+
+.portfolio__main {
+  background-color: map.get($colors, l-neut-pink);
+  padding: 100px 0;
+  width: 100%;
+}
+
+.portfolio__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  .portfolio__item {
+    aspect-ratio: 1 / 1; // 정사각형 유지
+    overflow: hidden;
+    background-color: #fff;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s ease, transform 0.5s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio__header {
+    padding: 60px 20px 40px;
+    h1 { font-size: 40px; }
+  }
+
+  .portfolio__tabs {
+    gap: 15px;
+    .tab-btn, .tab-divider { font-size: 18px; }
+  }
+
+  .portfolio__main {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 60px 0;
+  }
+
+  .portfolio__container {
+    padding: 0 20px;
+  }
+
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
