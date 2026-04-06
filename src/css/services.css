@@ -257,6 +257,9 @@
     align-items: flex-start !important;
     width: 100% !important;
   }
+  .service-item .message-box {
+    display: none !important;
+  }
   .service-item__image {
     width: 100% !important;
     aspect-ratio: 390/391 !important;
