@@ -1,6 +1,7 @@
 @use './variables' as *;
 @use 'sass:map';
 
+// header
 .services__header {
   width: 100vw;
   position: relative;
@@ -48,6 +49,7 @@
   }
 }
 
+// main section
 .services__main {
   width: 100vw;
   position: relative;
@@ -218,6 +220,7 @@
   display: none;
 }
 
+// Media Query
 @media (max-width: 768px) {
   .services {
     overflow-x: hidden;
