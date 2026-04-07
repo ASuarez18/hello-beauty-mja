@@ -150,6 +150,33 @@
   transform: scale(1.05);
 }
 
+.portfolio__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 53px;
+}
+
+.view-more-btn {
+  width: 161px;
+  height: 62px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0.8px solid #5E4A49;
+  cursor: pointer;
+  font-family: Baskervville, serif;
+  font-size: 20px;
+  color: #5E4A49;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+.view-more-btn:hover {
+  background-color: #b99692 !important;
+  border-color: #b99692 !important;
+  color: #ffffff !important;
+}
+
 @media (max-width: 768px) {
   .portfolio {
     overflow-x: hidden;
@@ -202,5 +229,14 @@
   .portfolio__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+  }
+  .portfolio__footer {
+    margin-top: 40px;
+  }
+  .view-more-btn {
+    width: 100%;
+    max-width: 327px;
+    height: 62px;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=portfolio.css.map */

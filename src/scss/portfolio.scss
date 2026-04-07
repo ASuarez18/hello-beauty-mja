@@ -166,6 +166,38 @@
   }
 }
 
+.portfolio__footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 53px; 
+}
+
+// 이 부분이 다른 페이지 버튼과 똑같은 색깔 로직입니다!
+.view-more-btn {
+  width: 161px;
+  height: 62px;
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  
+  background: transparent;
+  border: 0.8px solid #5E4A49; // About/Services와 동일한 기본 컬러
+  cursor: pointer;
+  
+  font-family: map.get($fonts, heading); 
+  font-size: 20px;
+  color: #5E4A49;
+  letter-spacing: 0.05em;
+  transition: map.get($transitions, default); // variables에 정의된 transition 사용
+
+  &:hover {
+    // 핑크색으로 바뀌는 마법 (comp-dark-p 사용)
+    background-color: map.get($colors, comp-dark-p) !important; 
+    border-color: map.get($colors, comp-dark-p) !important;
+    color: #ffffff !important;
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio {
     overflow-x: hidden;
@@ -223,5 +255,16 @@
   .portfolio__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+  }
+
+  .portfolio__footer {
+    margin-top: 40px;
+  }
+
+  .view-more-btn {
+    width: 100%;
+    max-width: 327px;
+    height: 62px;
+    font-size: 18px;
   }
 }
