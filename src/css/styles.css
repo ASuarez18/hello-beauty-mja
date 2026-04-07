@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Baskervville&family=Nunito+Sans:wght@400;700&display=swap");
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 .contact-page {
   background-color: #f8f6f4;
   padding: 192px 0;
@@ -65,7 +77,7 @@
   flex-direction: column;
   gap: 40px;
 }
-.form-container h3 {
+.form-container legend {
   font-family: "Baskervville", serif;
   font-size: 32px;
   font-weight: 400;
@@ -94,6 +106,7 @@
 }
 
 .form-section {
+  border: none;
   margin-bottom: 48px;
 }
 

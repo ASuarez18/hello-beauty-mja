@@ -48,7 +48,7 @@
 				<!-- -- Event Type -- -->
 				<form id="detailedContactForm" class="beauty-form">
 					<div class="form-section" id="step-1-selection">
-						<h3>Event Type</h3>
+						<legend>Event Type</legend>
 						<div class="selection-group">
 							<label class="select-box">
 								<input type="radio" name="event_type" value="wedding" checked />
@@ -76,8 +76,8 @@
 					<div id="step-1-wedding" class="dynamic-section">
 						<!-- Event Date & Time -->
 						<div class="form-row">
-							<div class="form-section">
-								<h3>Event Date</h3>
+							<fieldset class="form-section">
+								<legend>Event Date</legend>
 								<input
 									type="text"
 									class="input-field date-input"
@@ -93,9 +93,9 @@
 								<label class="checkbox-label"
 									><input type="checkbox" /> Not decided</label
 								>
-							</div>
-							<div class="form-section">
-								<h3>Event Time</h3>
+							</fieldset>
+							<fieldset class="form-section">
+								<legend>Event Time</legend>
 								<select class="input-field time-select">
 									<option value="">Full day</option>
 									<option value="morning">Morning</option>
@@ -104,22 +104,22 @@
 								<label class="checkbox-label"
 									><input type="checkbox" /> Not decided</label
 								>
-							</div>
+							</fieldset>
 						</div>
 
 						<!-- Name -->
-						<div class="form-section">
-							<h3>Name</h3>
+						<fieldset class="form-section">
+							<legend>Name</legend>
 							<input
 								type="text"
 								placeholder="Your name"
 								class="input-field name-input"
 							/>
-						</div>
+						</fieldset>
 
 						<!-- Contact Type -->
-						<div class="form-section">
-							<h3>Contact</h3>
+						<fieldset class="form-section">
+							<legend>Contact</legend>
 							<div class="contact-options">
 								<label class="radio-label">
 									<input
@@ -152,11 +152,11 @@
 									<span>Email</span>
 								</label>
 							</div>
-						</div>
+						</fieldset>
 
 						<!-- Call Time -->
-						<div class="form-section">
-							<h3>When do you want us to call?</h3>
+						<fieldset class="form-section">
+							<legend>When do you want us to call?</legend>
 							<div class="radio-group">
 								<label class="radio-label">
 									<input
@@ -184,7 +184,7 @@
 									<span>Evening</span>
 								</label>
 							</div>
-						</div>
+						</fieldset>
 						<button type="button" class="btn-next" id="btn-to-step-2">
 							Next
 						</button>
@@ -198,8 +198,8 @@
 					>
 						<button type="button" class="btn-back">< Back</button>
 
-						<div class="form-section">
-							<h3>Bridal Service</h3>
+						<fieldset class="form-section">
+							<legend>Bridal Service</legend>
 							<div class="selection-group">
 								<label class="select-box">
 									<input type="checkbox" name="bridal_service" value="makeup" />
@@ -214,10 +214,10 @@
 									/></span>
 								</label>
 							</div>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Event Location</h3>
+						<fieldset class="form-section">
+							<legend>Event Location</legend>
 							<div class="contact-options">
 								<label class="radio-label">
 									<input
@@ -240,10 +240,10 @@
 								placeholder="Your location"
 								class="input-field location-input"
 							/>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Premium service</h3>
+						<fieldset class="form-section">
+							<legend>Premium service</legend>
 							<div class="premium-grid">
 								<label class="checkbox-label"
 									><input type="checkbox" /> Deep skin cleaning</label
@@ -271,10 +271,10 @@
 									hydration)</label
 								>
 							</div>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Anyone else need service?</h3>
+						<fieldset class="form-section">
+							<legend>Anyone else need service?</legend>
 							<div class="guest-services-container">
 								<div class="guest-row">
 									<span class="guest-type">Groom</span>
@@ -345,16 +345,16 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Anything you want us to know?</h3>
+						<fieldset class="form-section">
+							<legend>Anything you want us to know?</legend>
 							<textarea
 								class="input-field textarea-field"
 								rows="4"
 								placeholder="Type here..."
 							></textarea>
-						</div>
+						</fieldset>
 
 						<button type="submit" class="btn-submit">Submit</button>
 					</div>
@@ -363,8 +363,8 @@
 					<!-- Step1: Party Fields -->
 					<div id="party-step-1" class="dynamic-section" style="display: none">
 						<div class="form-row">
-							<div class="form-section">
-								<h3>Event Date</h3>
+							<fieldset class="form-section">
+								<legend>Event Date</legend>
 								<input
 									type="text"
 									class="input-field date-input"
@@ -380,9 +380,9 @@
 								<label class="checkbox-label"
 									><input type="checkbox" /> Not decided</label
 								>
-							</div>
-							<div class="form-section">
-								<h3>Event Time</h3>
+							</fieldset>
+							<fieldset class="form-section">
+								<legend>Event Time</legend>
 								<select class="input-field time-select" required>
 									<option value="" disabled selected hidden>Full day</option>
 									<option value="morning">Morning</option>
@@ -391,28 +391,28 @@
 								<label class="checkbox-label"
 									><input type="checkbox" /> Not decided</label
 								>
-							</div>
+							</fieldset>
 						</div>
 
-						<div class="form-section">
-							<h3>Name</h3>
+						<fieldset class="form-section">
+							<legend>Name</legend>
 							<input
 								type="text"
 								placeholder="Your name"
 								class="input-field name-input"
 							/>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
+						<fieldset class="form-section">
 							<textarea
 								class="input-field textarea-field"
 								rows="4"
 								placeholder="Tell us more about the party..."
 							></textarea>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Contact</h3>
+						<fieldset class="form-section">
+							<legend>Contact</legend>
 							<div class="contact-options">
 								<label class="radio-label">
 									<input
@@ -453,7 +453,7 @@
 									<span>Email</span>
 								</label>
 							</div>
-						</div>
+						</fieldset>
 
 						<button type="button" class="btn-next">Next</button>
 					</div>
@@ -462,8 +462,8 @@
 					<div id="party-step-2" class="dynamic-section" style="display: none">
 						<button type="button" class="btn-back">< Back</button>
 
-						<div class="form-section">
-							<h3>Service</h3>
+						<fieldset class="form-section">
+							<legend>Service</legend>
 							<div class="selection-group">
 								<label class="select-box">
 									<input type="checkbox" name="party_service" value="makeup" />
@@ -478,10 +478,10 @@
 									/></span>
 								</label>
 							</div>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Event Location</h3>
+						<fieldset class="form-section">
+							<legend>Event Location</legend>
 							<div class="contact-options">
 								<label class="radio-label">
 									<input
@@ -508,10 +508,10 @@
 								placeholder="Your location"
 								class="input-field location-input"
 							/>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Premium service</h3>
+						<fieldset class="form-section">
+							<legend>Premium service</legend>
 							<div class="premium-grid">
 								<label class="checkbox-label"
 									><input type="checkbox" /> Deep skin cleaning</label
@@ -539,10 +539,10 @@
 									hydration)</label
 								>
 							</div>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Anyone else need services?</h3>
+						<fieldset class="form-section">
+							<legend>Anyone else need services?</legend>
 							<div class="guest-services-container">
 								<div class="guest-row">
 									<span class="guest-type">Women</span>
@@ -590,16 +590,16 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Anything you want us to know?</h3>
+						<fieldset class="form-section">
+							<legend>Anything you want us to know?</legend>
 							<textarea
 								class="input-field textarea-field"
 								rows="4"
 								placeholder="Type here..."
 							></textarea>
-						</div>
+						</fieldset>
 
 						<button type="submit" class="btn-submit">Submit</button>
 					</div>
@@ -611,8 +611,8 @@
 						style="display: none"
 					>
 						<div class="form-row">
-							<div class="form-section">
-								<h3>Event Date</h3>
+							<fieldset class="form-section">
+								<legend>Event Date</legend>
 								<input
 									type="text"
 									class="input-field date-input"
@@ -628,9 +628,9 @@
 								<label class="checkbox-label"
 									><input type="checkbox" /> Not decided</label
 								>
-							</div>
-							<div class="form-section">
-								<h3>Event Time</h3>
+							</fieldset>
+							<fieldset class="form-section">
+								<legend>Event Time</legend>
 								<select class="input-field time-select" required>
 									<option value="" disabled selected hidden>Full day</option>
 									<option value="morning">Morning</option>
@@ -639,20 +639,20 @@
 								<label class="checkbox-label"
 									><input type="checkbox" /> Not decided</label
 								>
-							</div>
+							</fieldset>
 						</div>
 
-						<div class="form-section">
-							<h3>Name</h3>
+						<fieldset class="form-section">
+							<legend>Name</legend>
 							<input
 								type="text"
 								placeholder="Your name"
 								class="input-field name-input"
 							/>
-						</div>
+						</fieldset>
 
-						<div class="form-section">
-							<h3>Contact</h3>
+						<fieldset class="form-section">
+							<legend>Contact</legend>
 							<div class="contact-options">
 								<label class="radio-label">
 									<input
@@ -697,7 +697,7 @@
 									<span>Email</span>
 								</label>
 							</div>
-						</div>
+						</fieldset>
 
 						<button type="submit" class="btn-submit">Submit</button>
 					</div>
