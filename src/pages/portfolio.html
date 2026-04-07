@@ -106,6 +106,8 @@
       const portfolioTabs = document.querySelector(".portfolio__tabs");
       const tabBtns = document.querySelectorAll(".tab-btn");
       const imgs = document.querySelectorAll(".portfolio__item img");
+      const viewMoreBtn = document.querySelector(".view-more-btn");
+      const portfolioItems = document.querySelectorAll(".portfolio__item");
 
       portfolioTabs.classList.add("active-makeup");
 
@@ -133,6 +135,19 @@
         "../assets/imgs/portfolio/makeup/Img3-8.png",
       ];
 
+      // 1. View More 버튼 클릭 이벤트 추가
+      if (viewMoreBtn) {
+        viewMoreBtn.addEventListener("click", () => {
+          portfolioItems.forEach((item, index) => {
+            if (index >= 4) {
+              item.classList.add("show");
+            }
+          });
+          viewMoreBtn.style.display = "none";
+        });
+      }
+
+      // 2. 탭 버튼 클릭 이벤트 (기존 코드 유지 + 초기화 추가)
       tabBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
           tabBtns.forEach((b) => b.classList.remove("active"));
@@ -146,6 +161,16 @@
           } else {
             portfolioTabs.classList.add("active-hairstyle");
             portfolioTabs.classList.remove("active-makeup");
+          }
+
+          // [중요] 탭을 바꿀 때 모바일 상태라면 다시 4개만 보여주고 버튼 살리기
+          if (window.innerWidth <= 768) {
+            portfolioItems.forEach((item, index) => {
+              if (index >= 4) {
+                item.classList.remove("show");
+              }
+            });
+            if (viewMoreBtn) viewMoreBtn.style.display = "flex";
           }
 
           const targetList = isMakeup ? makeupList : hairList;
