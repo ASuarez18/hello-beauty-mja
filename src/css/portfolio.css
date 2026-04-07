@@ -134,19 +134,20 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-.portfolio__grid .portfolio__item {
+
+.portfolio__item {
   aspect-ratio: 1/1;
   overflow: hidden;
   background-color: #fff;
 }
-.portfolio__grid .portfolio__item img {
+.portfolio__item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   transition: opacity 0.3s ease, transform 0.5s ease;
 }
-.portfolio__grid .portfolio__item img:hover {
+.portfolio__item img:hover {
   transform: scale(1.05);
 }
 
@@ -185,58 +186,44 @@
   .portfolio__header {
     width: 100% !important;
     position: static !important;
-    margin: 0 !important;
-    padding: 48px 20px 40px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 48px 24px 40px !important;
   }
   .portfolio__header h1 {
     font-size: 32px;
     letter-spacing: 0.1em;
   }
-  .portfolio__header .header-divider {
-    width: 120px;
-    margin: 16px auto;
-  }
   .portfolio__header p {
     font-size: 16px;
-    max-width: 327px;
+    max-width: 100%;
   }
-  .portfolio__tabs {
-    gap: 10px;
-  }
-  .portfolio__tabs::before {
-    width: 200px;
-  }
-  .portfolio__tabs::after {
-    width: 100px;
-    left: calc(50% - 100px);
-  }
-  .portfolio__tabs.active-hairstyle::after {
-    transform: translateX(100px);
-  }
-  .portfolio__tabs .tab-btn, .portfolio__tabs .tab-divider {
-    font-size: 24px;
+  .portfolio__header p br {
+    display: none;
   }
   .portfolio__main {
-    width: 100vw !important;
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    padding: 60px 0 !important;
+    width: 100% !important;
+    position: static !important;
+    margin: 0 !important;
+    transform: none !important;
+    padding: 40px 0 !important;
   }
   .portfolio__container {
-    padding: 0 20px;
+    padding: 0 24px;
   }
   .portfolio__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
-  .portfolio__footer {
-    margin-top: 40px;
+  .portfolio__grid .portfolio__item:nth-child(n+5) {
+    display: none;
+  }
+  .portfolio__grid .portfolio__item:nth-child(n+5).show {
+    display: block;
   }
   .view-more-btn {
     width: 100%;
     max-width: 327px;
-    height: 62px;
-    font-size: 18px;
+    margin: 40px auto 0;
   }
 }/*# sourceMappingURL=portfolio.css.map */

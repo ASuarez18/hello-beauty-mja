@@ -146,22 +146,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
 
-  .portfolio__item {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    background-color: #fff;
+.portfolio__item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #fff;
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: opacity 0.3s ease, transform 0.5s ease;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.5s ease;
 
-      &:hover {
-        transform: scale(1.05);
-      }
+    &:hover {
+      transform: scale(1.05);
     }
   }
 }
@@ -172,7 +172,7 @@
   margin-top: 53px; 
 }
 
-// 이 부분이 다른 페이지 버튼과 똑같은 색깔 로직입니다!
+
 .view-more-btn {
   width: 161px;
   height: 62px;
@@ -181,17 +181,16 @@
   justify-content: center;
   
   background: transparent;
-  border: 0.8px solid #5E4A49; // About/Services와 동일한 기본 컬러
+  border: 0.8px solid #5E4A49;
   cursor: pointer;
   
   font-family: map.get($fonts, heading); 
   font-size: 20px;
   color: #5E4A49;
   letter-spacing: 0.05em;
-  transition: map.get($transitions, default); // variables에 정의된 transition 사용
+  transition: map.get($transitions, default);
 
   &:hover {
-    // 핑크색으로 바뀌는 마법 (comp-dark-p 사용)
     background-color: map.get($colors, comp-dark-p) !important; 
     border-color: map.get($colors, comp-dark-p) !important;
     color: #ffffff !important;
@@ -199,72 +198,61 @@
 }
 
 @media (max-width: 768px) {
+  // 1. 전체 페이지 가로 스크롤 방지
   .portfolio {
     overflow-x: hidden;
     width: 100%;
   }
 
+  // 2. 헤더: 억지로 벌린 vw 값들을 초기화하고 패딩으로만 조절
   .portfolio__header {
     width: 100% !important;
     position: static !important;
-    margin: 0 !important;
-    padding: 48px 20px 40px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 48px 24px 40px !important; // 양옆 여백 충분히
 
     h1 {
       font-size: 32px;
       letter-spacing: 0.1em;
     }
 
-    .header-divider {
-      width: 120px;
-      margin: 16px auto;
-    }
-
     p {
       font-size: 16px;
-      max-width: 327px;
+      max-width: 100%; // 모바일에서는 꽉 차게
+      br { display: none; } // 모바일에서 강제 줄바꿈 해제
     }
   }
 
-  .portfolio__tabs {
-    gap: 10px;
-    &::before { width: 200px; }
-    &::after { 
-      width: 100px; 
-      left: calc(50% - 100px); 
-    }
-    &.active-hairstyle::after { transform: translateX(100px); }
-
-    .tab-btn, .tab-divider { 
-      font-size: map.get(map.get($text-styles, h6), size); 
-    }
-  }
-
+  // 3. 메인 영역: vw 레이아웃 초기화
   .portfolio__main {
-    width: 100vw !important;
-    position: relative !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    padding: 60px 0 !important;
+    width: 100% !important;
+    position: static !important;
+    margin: 0 !important;
+    transform: none !important;
+    padding: 40px 0 !important;
   }
 
+  // 4. 컨테이너: 실제 그리드가 들어갈 공간
   .portfolio__container {
-    padding: 0 20px;
+    padding: 0 24px; // 양옆 여백
   }
 
+  // 5. 그리드: 1열로 깔끔하게 배치
   .portfolio__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: 1fr; 
+    gap: 20px;
+
+    .portfolio__item:nth-child(n+5) {
+      display: none; // 모바일 4개 노출 유지
+      &.show { display: block; }
+    }
   }
 
-  .portfolio__footer {
-    margin-top: 40px;
-  }
-
+  // 6. 뷰모어 버튼
   .view-more-btn {
     width: 100%;
     max-width: 327px;
-    height: 62px;
-    font-size: 18px;
+    margin: 40px auto 0;
   }
 }
