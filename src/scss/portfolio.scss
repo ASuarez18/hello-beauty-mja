@@ -198,19 +198,18 @@
 }
 
 @media (max-width: 768px) {
-  // 1. 전체 페이지 가로 스크롤 방지
   .portfolio {
     overflow-x: hidden;
     width: 100%;
   }
 
-  // 2. 헤더: 억지로 벌린 vw 값들을 초기화하고 패딩으로만 조절
+
   .portfolio__header {
     width: 100% !important;
     position: static !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding: 48px 24px 40px !important; // 양옆 여백 충분히
+    padding: 48px 24px 40px !important;
 
     h1 {
       font-size: 32px;
@@ -219,12 +218,12 @@
 
     p {
       font-size: 16px;
-      max-width: 100%; // 모바일에서는 꽉 차게
-      br { display: none; } // 모바일에서 강제 줄바꿈 해제
+      max-width: 100%;
+      br { display: none; }
     }
   }
 
-  // 3. 메인 영역: vw 레이아웃 초기화
+
   .portfolio__main {
     width: 100% !important;
     position: static !important;
@@ -233,23 +232,23 @@
     padding: 40px 0 !important;
   }
 
-  // 4. 컨테이너: 실제 그리드가 들어갈 공간
+
   .portfolio__container {
-    padding: 0 24px; // 양옆 여백
+    padding: 0 24px;
   }
 
-  // 5. 그리드: 1열로 깔끔하게 배치
+
   .portfolio__grid {
     grid-template-columns: 1fr; 
     gap: 20px;
 
     .portfolio__item:nth-child(n+5) {
-      display: none; // 모바일 4개 노출 유지
+      display: none;
       &.show { display: block; }
     }
   }
 
-  // 6. 뷰모어 버튼
+
   .view-more-btn {
     width: 100%;
     max-width: 327px;
