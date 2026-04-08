@@ -24,6 +24,7 @@ body {
       font-size: map-get($map: vr.$text-sizes, $key: h1);
       font-weight: map-get($map: vr.$weights, $key: medium);
       color: map-get($map: vr.$colors, $key: bold-main);
+      letter-spacing: 8px;
     }
 
     hr {
@@ -146,6 +147,70 @@ body {
             color: map-get($map: vr.$colors, $key: l-neut-pale-w);
           }
         }
+      }
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// media query for mobile
+@media (max-width: map-get($map: vr.$breakpoints, $key: tablet)) {
+  header {
+    padding: 0px 25px !important;
+
+    br {
+      display: none;
+    }
+
+    h1 {
+      font-size: map-get($map: vr.$text-sizes, $key: h3) !important;
+      margin-bottom: 25px;
+    }
+
+    hr {
+      width: 45% !important;
+    }
+
+    p {
+      font-size: map-get($map: vr.$text-sizes, $key: body);
+      line-height: 25px;
+    }
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    .class {
+      flex-direction: column !important;
+      // width: 90%;
+      width: 100% !important;
+      gap: 20px;
+
+      .class-image {
+        width: 100% !important;
+        height: auto;
+      }
+
+      .info-class {
+        padding: 0 20px !important;
+
+        .details-class {
+          flex-direction: column !important;
+          gap: 25px !important;
+        }
+
+        a {
+          font-size: map-get($map: vr.$text-sizes, $key: small);
+          padding: 15px 20px;
+          text-align: center;
+          width: 100% !important;
+        }
+      }
+
+      &:last-of-type {
+        margin-bottom: 60px !important;
       }
     }
   }

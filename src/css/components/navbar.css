@@ -44,7 +44,7 @@ TODOs
   max-width: 110px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 868px) {
   #navbar {
     padding: 40px 0px 10px;
   }
@@ -55,7 +55,7 @@ TODOs
     display: none;
   }
   #navbar li a {
-    border-right: transparent;
+    border-right: none !important;
   }
   #navbar li:first-of-type, #navbar li:nth-child(5), #navbar li:last-of-type {
     display: block;

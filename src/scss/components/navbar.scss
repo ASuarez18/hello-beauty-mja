@@ -59,7 +59,7 @@ TODOs
 }
 
 // media query for mobile
-@media (max-width: map-get($map: vr.$breakpoints, $key: mobile)) {
+@media (max-width: map-get($map: vr.$breakpoints, $key: tablet)) {
   #navbar {
     padding: 40px 0px 10px;
     ul {
@@ -68,7 +68,7 @@ TODOs
     li {
       display: none;
       a {
-        border-right: transparent; // ! NOT WORKING
+        border-right: none !important;
       }
 
       &:first-of-type,
