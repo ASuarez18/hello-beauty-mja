@@ -12,6 +12,7 @@ TODOs
   position: sticky;
   z-index: 100;
   top: 0px;
+  transition: all 0.3s ease;
 }
 #navbar ul {
   display: flex;
@@ -38,11 +39,31 @@ TODOs
 #navbar ul li a:hover {
   text-decoration: underline;
 }
+#navbar ul li #ham-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#navbar ul li #ham-btn:hover {
+  transform: scale(110%);
+}
+#navbar ul li #ham-btn.ham-active {
+  transform: rotate(90deg);
+}
 #navbar ul li:last-child a, #navbar ul li:nth-child(4) a {
   border-right: none;
 }
 #navbar ul li img:not(a) {
   max-width: 110px;
+}
+#navbar.scrolled {
+  height: 70px;
+  padding: 20px 60px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+#navbar.scrolled ul li img:not(#ham-btn img) {
+  height: 40px;
 }
 
 @media (max-width: 868px) {
@@ -61,6 +82,52 @@ TODOs
   #navbar li:first-of-type, #navbar li:nth-child(5), #navbar li:last-of-type {
     display: block;
   }
+  #navbar li:last-of-type a {
+    padding: 0;
+  }
+  #navbar.scrolled {
+    height: 60px;
+    padding: 10px 0;
+  }
+  #navbar.scrolled ul li img:not(#ham-btn img) {
+    height: 35px;
+  }
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f6f4;
+  z-index: 90;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+}
+.mobile-menu ul {
+  list-style: none;
+  text-align: center;
+}
+.mobile-menu ul li {
+  margin: 20px 0;
+}
+.mobile-menu ul li a {
+  text-decoration: none;
+  font-family: "Baskervville", serif;
+  font-size: 2rem;
+  color: #725a58;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=navbar.css.map */

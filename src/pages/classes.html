@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/pages/classes.css" />
     <link rel="stylesheet" href="../css/components/navbar.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <nav id="navbar">
@@ -16,9 +17,9 @@
         <li><a href="../pages/portfolio.html">My Work</a></li>
         <li><a href="../pages/services.html">Services</a></li>
         <li><a href="../pages/classes.html">Classes</a></li>
-
         <li>
           <img
+          id="navbar-logo"
             src="../assets/imgs/logotype/logotype.svg"
             alt="Carla Beauty Logotype"
           />
@@ -39,14 +40,14 @@
       <h1>CLASSES</h1>
       <hr />
       <p>
-        We offer classes for all skill levels, from beginner to<br /> future
-        professionals
+        We offer classes for all skill levels, from beginner to<br />
+        future professionals
       </p>
     </header>
     <main>
       <div class="class" id="one-class">
         <img
-        class="class-image"
+          class="class-image"
           src="../assets/imgs/classes/one-on-one.png"
           alt="one-one master class image"
         />
@@ -89,12 +90,14 @@
             <li>Business and Career Guidance</li>
             <li>Conclusion and Future Support</li>
           </ul>
-          <a class="view-class-btn" href="./classes-details/one-master.html">View Class</a>
+          <a class="view-class-btn" href="./classes-details/one-master.html"
+            >View Class</a
+          >
         </div>
       </div>
       <div class="class" id="day-class">
         <img
-        class="class-image"
+          class="class-image"
           src="../assets/imgs/classes/professional.png"
           alt="professional 1 day class image"
         />
@@ -141,12 +144,14 @@
             <li>Business and Professionalism</li>
             <li>Conclusion and Certificate</li>
           </ul>
-          <a class="view-class-btn" href="./classes-details/professional.html">View Class</a>
+          <a class="view-class-btn" href="./classes-details/professional.html"
+            >View Class</a
+          >
         </div>
       </div>
       <div class="class" id="self-class">
         <img
-        class="class-image"
+          class="class-image"
           src="../assets/imgs/classes/self.png"
           alt="self makeup master class image"
         />
@@ -192,7 +197,9 @@
             <li>Tips for Everyday Makeup</li>
             <li>Conclusion and Q&A Session</li>
           </ul>
-          <a class="view-class-btn" href="./classes-details/self-makeup.html">View Class</a>
+          <a class="view-class-btn" href="./classes-details/self-makeup.html"
+            >View Class</a
+          >
         </div>
       </div>
     </main>
@@ -230,5 +237,6 @@
       </nav>
       <p>Copyright 2024, Carla Beauty</p>
     </footer>
+    <script src="../scripts/script.js"></script>
   </body>
 </html>
