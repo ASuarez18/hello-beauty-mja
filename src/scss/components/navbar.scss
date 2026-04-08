@@ -26,8 +26,6 @@ TODOs
     li {
       list-style: none;
 
-      
-
       // a
       a {
         text-decoration: none;
@@ -49,12 +47,35 @@ TODOs
         }
       }
 
-      &:last-child a, &:nth-child(4) a {
+      &:last-child a,
+      &:nth-child(4) a {
         border-right: none;
       }
 
       img:not(a) {
         max-width: 110px;
+      }
+    }
+  }
+}
+
+// media query for mobile
+@media (max-width: map-get($map: vr.$breakpoints, $key: tablet)) {
+  #navbar {
+    padding: 40px 0px 10px;
+    ul {
+      gap: 20px;
+    }
+    li {
+      display: none;
+      a {
+        border-right: none !important;
+      }
+
+      &:first-of-type,
+      &:nth-child(5),
+      &:last-of-type {
+        display: block;
       }
     }
   }

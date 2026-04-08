@@ -22,6 +22,7 @@ body header h1 {
   font-size: 80px;
   font-weight: 500;
   color: #725a58;
+  letter-spacing: 8px;
 }
 body header hr {
   width: 15%;
@@ -125,6 +126,57 @@ body main .class .info-class a {
 body main .class .info-class a:hover {
   background-color: #725a58;
   color: #f8f6f4;
+}
+body main .class:last-of-type {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 868px) {
+  header {
+    padding: 0px 25px !important;
+  }
+  header br {
+    display: none;
+  }
+  header h1 {
+    font-size: 48px !important;
+    margin-bottom: 25px;
+  }
+  header hr {
+    width: 45% !important;
+  }
+  header p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  main .class {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px;
+  }
+  main .class .class-image {
+    width: 100% !important;
+    height: auto;
+  }
+  main .class .info-class {
+    padding: 0 20px !important;
+  }
+  main .class .info-class .details-class {
+    flex-direction: column !important;
+    gap: 25px !important;
+  }
+  main .class .info-class a {
+    padding: 15px 20px;
+    text-align: center;
+    width: 100% !important;
+  }
+  main .class:last-of-type {
+    margin-bottom: 60px !important;
+  }
 }
 
 /*# sourceMappingURL=classes.css.map */
