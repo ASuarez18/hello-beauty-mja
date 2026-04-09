@@ -142,7 +142,7 @@
               item.classList.add("show");
             }
           });
-          viewMoreBtn.style.display = "none";
+          viewMoreBtn.style.setProperty("display", "none", "important");
         });
       }
 
@@ -167,7 +167,7 @@
                 item.classList.remove("show");
               }
             });
-            if (viewMoreBtn) viewMoreBtn.style.display = "flex";
+            if (viewMoreBtn) viewMoreBtn.style.display = "";
           }
 
           const targetList = isMakeup ? makeupList : hairList;

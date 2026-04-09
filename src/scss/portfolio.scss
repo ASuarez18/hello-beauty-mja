@@ -172,18 +172,15 @@
   margin-top: 53px; 
 }
 
-
 .view-more-btn {
+  display: none;
   width: 161px;
   height: 62px;
-  display: inline-flex; 
   align-items: center;
   justify-content: center;
-  
   background: transparent;
   border: 0.8px solid #5E4A49;
   cursor: pointer;
-  
   font-family: map.get($fonts, heading); 
   font-size: 20px;
   color: #5E4A49;
@@ -198,12 +195,10 @@
 }
 
 @media (max-width: 768px) {
-
   .portfolio {
     overflow-x: hidden;
     width: 100%;
   }
-
 
   .portfolio__header {
     width: 100% !important;
@@ -230,38 +225,22 @@
       max-width: 327px !important;
       margin: 0 auto;
       word-break: keep-all;
-      
-
-      br { 
-        display: none !important; 
-      }
+      br { display: none !important; }
     }
   }
-
 
   .portfolio__tabs {
     margin-top: 40px;
     gap: 15px;
-
-    &::before { 
-      width: 280px; 
-    }
-    &::after { 
-      width: 140px; 
-      left: calc(50% - 140px); 
-    }
-    &.active-hairstyle::after { 
-      transform: translateX(140px); 
-    }
-
+    &::before { width: 280px; }
+    &::after { width: 140px; left: calc(50% - 140px); }
+    &.active-hairstyle::after { transform: translateX(140px); }
     .tab-btn, .tab-divider {
-
       font-size: 20px !important; 
       font-family: map.get($fonts, heading);
       font-weight: 400;
     }
   }
-
 
   .portfolio__main {
     width: 100vw !important;
@@ -272,7 +251,6 @@
     padding: 40px 0 !important;
   }
 
-
   .portfolio__container {
     width: 100% !important;
     padding: 0 20px !important;
@@ -280,18 +258,13 @@
   }
 
   .portfolio__grid {
-
     grid-template-columns: 1fr; 
     gap: 20px;
-
     .portfolio__item:nth-child(n+5) {
       display: none;
-      &.show { 
-        display: block; 
-      }
+      &.show { display: block; }
     }
   }
-
 
   .portfolio__footer {
     margin-top: 40px;
@@ -299,6 +272,7 @@
   }
 
   .view-more-btn {
+    display: flex !important;
     width: 100% !important;
     max-width: 327px;
     height: 62px;

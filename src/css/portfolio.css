@@ -158,9 +158,9 @@
 }
 
 .view-more-btn {
+  display: none;
   width: 161px;
   height: 62px;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   background: transparent;
@@ -257,6 +257,7 @@
     padding-bottom: 60px;
   }
   .view-more-btn {
+    display: flex !important;
     width: 100% !important;
     max-width: 327px;
     height: 62px;
