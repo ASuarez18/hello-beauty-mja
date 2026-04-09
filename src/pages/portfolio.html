@@ -137,12 +137,26 @@
 
       if (viewMoreBtn) {
         viewMoreBtn.addEventListener("click", () => {
+          const isExpanded = viewMoreBtn.textContent === "Show Less";
+
           portfolioItems.forEach((item, index) => {
             if (index >= 4) {
-              item.classList.add("show");
+              if (isExpanded) {
+                item.classList.remove("show");
+              } else {
+                item.classList.add("show");
+              }
             }
           });
-          viewMoreBtn.style.setProperty("display", "none", "important");
+
+          viewMoreBtn.textContent = isExpanded ? "View More" : "Show Less";
+
+          if (isExpanded) {
+            window.scrollTo({
+              top: document.querySelector(".portfolio__grid").offsetTop - 100,
+              behavior: "smooth",
+            });
+          }
         });
       }
 
@@ -167,7 +181,10 @@
                 item.classList.remove("show");
               }
             });
-            if (viewMoreBtn) viewMoreBtn.style.display = "";
+            if (viewMoreBtn) {
+              viewMoreBtn.style.display = "";
+              viewMoreBtn.textContent = "View More";
+            }
           }
 
           const targetList = isMakeup ? makeupList : hairList;

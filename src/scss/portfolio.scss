@@ -173,25 +173,19 @@
 }
 
 .view-more-btn {
-  display: none;
+  display: none !important;
   width: 161px;
   height: 62px;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border: 0.8px solid #5E4A49;
+  background: transparent !important;
+  border: 0.8px solid #5E4A49 !important;
   cursor: pointer;
   font-family: map.get($fonts, heading); 
   font-size: 20px;
-  color: #5E4A49;
+  color: #5E4A49 !important;
   letter-spacing: 0.05em;
-  transition: map.get($transitions, default);
-
-  &:hover {
-    background-color: map.get($colors, comp-dark-p) !important; 
-    border-color: map.get($colors, comp-dark-p) !important;
-    color: #ffffff !important;
-  }
+  /* hover와 transition을 제거하여 디자인 고정 */
 }
 
 @media (max-width: 768px) {
@@ -262,7 +256,9 @@
     gap: 20px;
     .portfolio__item:nth-child(n+5) {
       display: none;
-      &.show { display: block; }
+      &.show { 
+        display: block;
+      }
     }
   }
 
@@ -278,5 +274,8 @@
     height: 62px;
     font-size: 18px;
     margin: 0 auto;
+    background: transparent !important;
+    border: 0.8px solid #5E4A49 !important;
+    color: #5E4A49 !important;
   }
 }
