@@ -10,12 +10,13 @@ $(document).ready(function () {
   const $firstLi = $('#navbar ul li').first();
 
   // - Routes
-  const logoOriginal = '../assets/imgs/logotype/logotype.svg';
-  const logoScrolled = '../assets/imgs/logotype/logotype-small.svg';
+  const logoOriginal = '/src/assets/imgs/logotype/logotype.svg';
+  const logoScrolled = '/src/assets/imgs/logotype/logotype-small.svg';
+  const iconHam = '/src/assets/icons/hamburger.svg';
 
   const originalContent = $firstLi.html();
   // Hamburger menu template
-  const hamburgerMenu = '<button id="ham-btn"><img src="../assets/icons/hamburger.svg" alt="menu" /></button>';
+  const hamburgerMenu = `<button id="ham-btn"><img src="${iconHam}" alt="menu" /></button>`;
   // Mobile menu template
   const mobileMenuTemplate = `
   <div id="mobile-menu-overlay" class="mobile-menu">
