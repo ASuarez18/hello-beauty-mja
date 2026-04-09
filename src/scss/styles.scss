@@ -1,10 +1,123 @@
-@use "variables";
-@use "contact";
+@use "sass:map";
+@use "variables" as *;
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+// ========================================================================
+// 1. GLOBAL RESETS & BASE TYPOGRAPHY
+// ========================================================================
+
+* {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: map.get($fonts, primary);
+	color: map.get($colors, brand);
+	background-color: map.get($colors, l-neut-pale-w);
+	scroll-behavior: smooth;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: map.get($transitions, default);
+}
+
+// Global Typography Defaults
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: map.get($fonts, heading);
+	font-weight: map.get($weights, regular);
+}
+
+h2 {
+	font-size: map.get(map.get($text-styles, h2), size);
+	color: map.get($colors, bold-main);
+	margin-bottom: map.get($spacing, sp-4);
+}
+
+h3 {
+	font-size: map.get(map.get($text-styles, h3), size);
+	color: map.get($colors, bold-main);
+}
+
+p {
+	font-size: map.get(map.get($text-styles, body), size);
+	line-height: 1.6;
+	color: map.get($colors, d-neut-dark-g);
+}
+
+// Global Section Padding
+main > section {
+	padding: map.get($spacing, sp-10) map.get($spacing, sp-4);
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+// ========================================================================
+// 2. HEADER SECTION
+// ========================================================================
+
+header {
+	// Add specific header styles here
+}
+
+// ========================================================================
+// 3. ABOUT SECTION (#about)
+// ========================================================================
+
+#about {
+	// Add specific about styles here
+}
+
+// ========================================================================
+// 4. PORTFOLIO SECTION (#portfolio)
+// ========================================================================
+
+#portfolio {
+	// Add specific portfolio styles here
+}
+
+// ========================================================================
+// 5. SERVICES SECTION (#services)
+// ========================================================================
+
+#services {
+	// Add specific services styles here
+}
+
+// ========================================================================
+// 6. CLASSES SECTION (#classes)
+// ========================================================================
+
+#classes {
+	// Add specific classes styles here
+}
+
+// ========================================================================
+// 7. BEAUTY TIPS SECTION (#beauty-tips)
+// ========================================================================
+
+#beauty-tips {
+	// Add specific beauty tips styles here
+}
+
+// ========================================================================
+// 8. FOOTER
+// ========================================================================
+
+footer {
+	// Add specific footer styles here
 }
