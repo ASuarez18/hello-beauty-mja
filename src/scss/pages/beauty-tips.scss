@@ -120,6 +120,12 @@ body {
         transition: map-get($map: vr.$transitions, $key: default);
         cursor: pointer;
 
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+
         a {
           display: block;
           width: 100%;
@@ -151,7 +157,10 @@ body {
       padding: 0 !important;
       #tags {
         margin-top: 40px !important;
-        gap: 10px;
+        gap: 0 !important;
+        .tag {
+          font-size: map-get($map: vr.$text-sizes, $key: button-sm) !important;
+        }
       }
 
       #video-showcase {

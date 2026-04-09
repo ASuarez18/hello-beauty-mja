@@ -104,6 +104,11 @@ body main #video-showcase .video-card {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+body main #video-showcase .video-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 body main #video-showcase .video-card a {
   display: block;
   width: 100%;
@@ -126,7 +131,10 @@ body main #video-showcase .video-card a:hover {
   }
   body main #tags {
     margin-top: 40px !important;
-    gap: 10px;
+    gap: 0 !important;
+  }
+  body main #tags .tag {
+    font-size: 18px !important;
   }
   body main #video-showcase {
     display: flex;

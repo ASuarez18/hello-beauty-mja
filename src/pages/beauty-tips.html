@@ -47,11 +47,11 @@
     </header>
     <main>
       <div id="tags">
-        <button onclick="" class="tag active">#All</button
-        ><button onclick="" class="tag">#Eyes</button
-        ><button onclick="" class="tag">#Base</button
-        ><button onclick="" class="tag">#Lips</button
-        ><button onclick="" class="tag">#Hair</button>
+        <button class="tag active" data-filter="all">#All</button
+        ><button class="tag" data-filter="eyes">#Eyes</button
+        ><button class="tag" data-filter="base">#Base</button
+        ><button class="tag" data-filter="lips">#Lips</button
+        ><button class="tag" data-filter="hair">#Hair</button>
       </div>
       <!-- > Grid -->
       <div id="video-showcase">
@@ -59,76 +59,67 @@
           <img src="" alt="" class="play-button"><img src="" alt="" class="thumbnail">
           <p></p>
         </div> -->
-        <div class="video-card">
+        <div class="video-card" data-category="hair">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/1.png"
               alt="video 1"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="lips">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/2.png"
               alt="video 2"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="base">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/3.png"
               alt="video 3"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="eyes">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/4.png"
               alt="video 4"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="base">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/5.png"
               alt="video 5"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="base">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/6.png"
               alt="video 6"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="hair">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/7.png"
               alt="video 7"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="hair">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/8.png"
               alt="video 8"
-              class="video-card"
           /></a>
         </div>
-        <div class="video-card">
+        <div class="video-card" data-category="base">
           <a href=""
             ><img
               src="../assets/imgs/beauty-tips/9.png"
               alt="video 9"
-              class="video-card"
           /></a>
         </div>
       </div>
@@ -170,5 +161,6 @@
       <p>Copyright 2024, Carla Beauty</p>
     </footer>
     <script src="../scripts/script.js"></script>
+    <script src="../scripts/beauty-tips.js"></script>
   </body>
 </html>
