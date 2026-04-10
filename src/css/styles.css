@@ -57,6 +57,7 @@ main > section {
   text-align: center;
 }
 
+.about-me-btn,
 .service-quote-btn,
 #home-wedding-next,
 #home-party-next,
@@ -76,6 +77,7 @@ main > section {
   transition: all 0.3s ease;
   box-sizing: border-box;
 }
+.about-me-btn:hover,
 .service-quote-btn:hover,
 #home-wedding-next:hover,
 #home-party-next:hover,
@@ -266,7 +268,8 @@ main > section {
   z-index: 1;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 #classes .all-classes-btn {
@@ -405,6 +408,4 @@ main > section {
     max-width: 400px;
     margin-top: 24px;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
