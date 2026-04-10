@@ -18,6 +18,10 @@ body {
   scroll-behavior: smooth;
 }
 
+nav img {
+  display: inline;
+}
+
 img {
   max-width: 100%;
   height: auto;
