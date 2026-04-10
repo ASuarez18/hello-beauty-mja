@@ -331,4 +331,75 @@ main > section {
   background-color: #b99692;
   border-color: #b99692;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .service-quote-btn,
+  .all-classes-btn {
+    width: 100%;
+  }
+  #services h2 {
+    font-size: 40px;
+  }
+  #services #service-options {
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 48px;
+  }
+  #services #service-options .service,
+  #services #service-options .service-wedding {
+    width: 100%;
+    max-width: 400px;
+  }
+  #classes h2 {
+    font-size: 40px;
+  }
+  #classes #classes-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 96px;
+  }
+  #classes .classes-text-wrapper {
+    align-items: center;
+    width: 100%;
+  }
+  #classes #all-classes {
+    max-width: 100%;
+  }
+  #classes .individual-class {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    padding: 32px 0;
+    border-bottom: none;
+  }
+  #classes .individual-class .class-info {
+    align-items: center;
+    gap: 16px;
+  }
+  #classes .individual-class .class-title {
+    flex-direction: column;
+    gap: 8px;
+  }
+  #classes .individual-class .class-title h4 {
+    font-size: 32px;
+    text-align: center;
+  }
+  #classes .individual-class p {
+    padding-left: 0;
+  }
+  #classes .individual-class > a {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  #classes .all-classes-btn {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+  #classes .classes-portrait {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 24px;
+  }
 }/*# sourceMappingURL=styles.css.map */

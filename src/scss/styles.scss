@@ -191,7 +191,7 @@ header {
 
 		.service {
 			width: 300px;
-			transition: map-get($transitions, default);
+			transition: map.get($transitions, default);
 
 			.offset-border {
 				opacity: 0;
@@ -425,4 +425,101 @@ header {
 
 footer {
 	// Add specific footer styles here
+}
+
+// ========================================================================
+// 9. MOBILE RESPONSIVE DESIGN (Media Queries)
+// ========================================================================
+
+@media (max-width: 768px) {
+	// --- GLOBAL MOBILE BUTTONS ---
+	.service-quote-btn,
+	.all-classes-btn {
+		width: 100%;
+	}
+
+	// --- 5. SERVICES SECTION MOBILE ---
+	#services {
+		h2 {
+			font-size: 40px;
+		}
+		#service-options {
+			flex-direction: column;
+			gap: map.get($spacing, sp-6);
+			margin-top: map.get($spacing, sp-6);
+
+			.service,
+			.service-wedding {
+				width: 100%;
+				max-width: 400px; // Standardizes the width for mobile
+			}
+		}
+	}
+
+	// --- 6. CLASSES SECTION MOBILE ---
+	#classes {
+		h2 {
+			font-size: 40px;
+		}
+
+		#classes-container {
+			flex-direction: column; // Stacks the text wrapper and the portrait image
+			align-items: center;
+			gap: map.get($spacing, sp-8);
+		}
+
+		.classes-text-wrapper {
+			align-items: center;
+			width: 100%;
+		}
+
+		#all-classes {
+			max-width: 100%;
+		}
+
+		.individual-class {
+			flex-direction: column;
+			text-align: center;
+			gap: map.get($spacing, sp-4);
+			padding: map.get($spacing, sp-5) 0;
+			border-bottom: none;
+
+			.class-info {
+				align-items: center;
+				gap: map.get($spacing, sp-3);
+			}
+
+			.class-title {
+				flex-direction: column;
+				gap: map.get($spacing, sp-2);
+
+				h4 {
+					font-size: 32px;
+					text-align: center;
+				}
+			}
+
+			p {
+				padding-left: 0;
+			}
+
+			// Centers the link/arrow at the bottom of the stack
+			> a {
+				margin-top: map.get($spacing, sp-2);
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		.all-classes-btn {
+			margin-left: 0; // Removes the desktop left margin
+			margin-top: map.get($spacing, sp-4);
+		}
+
+		.classes-portrait {
+			width: 100%;
+			max-width: 400px;
+			margin-top: map.get($spacing, sp-4);
+		}
+	}
 }
