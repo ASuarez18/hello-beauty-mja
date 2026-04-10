@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/components/navbar.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,9 +16,35 @@
       href="https://fonts.googleapis.com/css2?family=Baskervville&family=Nunito+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 
   <body>
+    <nav id="navbar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/portfolio.html">My Work</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/classes.html">Classes</a></li>
+        <li>
+          <img
+            id="navbar-logo"
+            src="../assets/imgs/logotype/logotype.svg"
+            alt="Carla Beauty Logotype"
+          />
+        </li>
+        <li><a href="../pages/beauty-tips.html">Beauty Tips</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+        <li>
+          <a href="https://instagram.com"
+            ><img
+              src="../assets/icons/contact-icons/instagram.svg"
+              alt="instagram logo"
+          /></a>
+        </li>
+      </ul>
+    </nav>
     <main class="about">
       <!-- header -->
       <section class="about__header">
@@ -78,5 +106,40 @@
         </div>
       </section>
     </main>
+    <footer>
+      <img
+        src="../assets/imgs/logotype/logotype.svg"
+        alt="Carla beauty logotype"
+      />
+      <p>Expert Makeup and Hairstyle Studio</p>
+      <div class="socials">
+        <a href=""
+          ><img
+            src="../assets/icons/contact-icons/phone.svg"
+            alt="phone contact" /></a
+        ><a href=""
+          ><img
+            src="../assets/icons/contact-icons/whatsapp.svg"
+            alt="whatsapp contact" /></a
+        ><a href=""
+          ><img
+            src="../assets/icons/contact-icons/instagram.svg"
+            alt="instagram contact"
+        /></a>
+      </div>
+      <nav id="footer-bar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./portfolio.html">My Work</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./classes.html">Classes</a></li>
+          <li><a href="./beauty-tips.html">Beauty Tips</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Copyright 2024, Carla Beauty</p>
+    </footer>
+    <script src="../scripts/script.js"></script>
   </body>
 </html>

@@ -6,18 +6,44 @@
     <title>Contact Us | BC Beauty</title>
     <link rel="stylesheet" href="../css/contact.css" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/components/navbar.css" />
+    <link rel="stylesheet" href="../css/components/footer.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&libraries=places"></script>
   </head>
   <body>
-    <header class="header"></header>
+    <nav id="navbar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/portfolio.html">My Work</a></li>
+        <li><a href="../pages/services.html">Services</a></li>
+        <li><a href="../pages/classes.html">Classes</a></li>
+        <li>
+          <img
+            id="navbar-logo"
+            src="../assets/imgs/logotype/logotype.svg"
+            alt="Carla Beauty Logotype"
+          />
+        </li>
+        <li><a href="../pages/beauty-tips.html">Beauty Tips</a></li>
+        <li><a href="../pages/about.html">About</a></li>
+        <li><a href="../pages/contact.html">Contact</a></li>
+        <li>
+          <a href="https://instagram.com"
+            ><img
+              src="../assets/icons/contact-icons/instagram.svg"
+              alt="instagram logo"
+          /></a>
+        </li>
+      </ul>
+    </nav>
 
     <main class="contact-page">
       <!-- > Contact widget -->
       <div class="party-chat-widget">
         <div class="chat-options" id="chat-widget-options">
           <button type="button" class="option-btn opt-ig">
-            <img src="../assets/imgs/message-box/ig.svg" alt="Instagram" />
+            <img src="../assets/icons/contact-icons/" alt="Instagram" />
           </button>
           <button type="button" class="option-btn opt-phone">
             <img src="../assets/imgs/message-box/phone.svg" alt="Phone" />
@@ -62,7 +88,7 @@
             +1 0000000000
           </a>
           <a href="#">
-            <img src="../assets/icons/contact-icons/ig.svg" alt="ig" />
+            <img src="../assets/icons/contact-icons/instagram.svg" alt="ig" />
             carlabeatrizs_
           </a>
         </div>
@@ -1098,9 +1124,44 @@
       </section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer>
+      <img
+        src="../assets/imgs/logotype/logotype.svg"
+        alt="Carla beauty logotype"
+      />
+      <p>Expert Makeup and Hairstyle Studio</p>
+      <div class="socials">
+        <a href=""
+          ><img
+            src="../assets/icons/contact-icons/phone.svg"
+            alt="phone contact" /></a
+        ><a href=""
+          ><img
+            src="../assets/icons/contact-icons/whatsapp.svg"
+            alt="whatsapp contact" /></a
+        ><a href=""
+          ><img
+            src="../assets/icons/contact-icons/instagram.svg"
+            alt="instagram contact"
+        /></a>
+      </div>
+      <nav id="footer-bar">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./portfolio.html">My Work</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./classes.html">Classes</a></li>
+          <li><a href="./beauty-tips.html">Beauty Tips</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Copyright 2024, Carla Beauty</p>
+    </footer>
 
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="../scripts/contact.js"></script>
+    <script src="../scripts/script.js"></script>
+
   </body>
 </html>
