@@ -13,6 +13,34 @@
     <header class="header"></header>
 
     <main class="contact-page">
+      <!-- > Contact widget -->
+      <div class="party-chat-widget">
+        <div class="chat-options" id="chat-widget-options">
+          <button type="button" class="option-btn opt-ig">
+            <img src="../assets/imgs/message-box/ig.svg" alt="Instagram" />
+          </button>
+          <button type="button" class="option-btn opt-phone">
+            <img src="../assets/imgs/message-box/phone.svg" alt="Phone" />
+          </button>
+          <button type="button" class="option-btn opt-wa">
+            <img src="../assets/imgs/message-box/whatsApp.svg" alt="WhatsApp" />
+          </button>
+          <button
+            type="button"
+            class="option-btn opt-close"
+            id="chat-widget-close"
+          >
+            <img src="../assets/imgs/message-box/dismiss.svg" alt="Close" />
+          </button>
+        </div>
+        <div class="chat-trigger" id="chat-widget-trigger">
+          <img
+            src="../assets/imgs/message-box/message.svg"
+            alt="message-icon"
+          />
+        </div>
+      </div>
+
       <section class="contact-header">
         <h1 class="main-title">CONTACT</h1>
         <div class="line"></div>
@@ -326,6 +354,7 @@
                         type="number"
                         value="0"
                         min="0"
+                        max="5"
                         class="counter-input"
                         readonly
                       />
@@ -349,6 +378,7 @@
                         type="number"
                         value="0"
                         min="0"
+                        max="5"
                         class="counter-input"
                         readonly
                       />
@@ -375,6 +405,7 @@
                         type="number"
                         value="0"
                         min="0"
+                        max="5"
                         class="counter-input"
                         readonly
                       />
@@ -444,44 +475,6 @@
                     decided</label
                   >
                 </fieldset>
-              </div>
-              <div class="party-chat-widget">
-                <div class="chat-options" id="chat-widget-options">
-                  <button type="button" class="option-btn opt-ig">
-                    <img
-                      src="../assets/imgs/message-box/ig.svg"
-                      alt="Instagram"
-                    />
-                  </button>
-                  <button type="button" class="option-btn opt-phone">
-                    <img
-                      src="../assets/imgs/message-box/phone.svg"
-                      alt="Phone"
-                    />
-                  </button>
-                  <button type="button" class="option-btn opt-wa">
-                    <img
-                      src="../assets/imgs/message-box/whatsApp.svg"
-                      alt="WhatsApp"
-                    />
-                  </button>
-                  <button
-                    type="button"
-                    class="option-btn opt-close"
-                    id="chat-widget-close"
-                  >
-                    <img
-                      src="../assets/imgs/message-box/dismiss.svg"
-                      alt="Close"
-                    />
-                  </button>
-                </div>
-                <div class="chat-trigger" id="chat-widget-trigger">
-                  <img
-                    src="../assets/imgs/message-box/message.svg"
-                    alt="message-icon"
-                  />
-                </div>
               </div>
 
               <fieldset class="form-section">
@@ -633,6 +626,7 @@
                         type="number"
                         value="0"
                         min="0"
+                        max="5"
                         class="counter-input"
                         readonly
                       />
@@ -658,6 +652,7 @@
                         type="number"
                         value="0"
                         min="0"
+                        max="5"
                         class="counter-input"
                         readonly
                       />
@@ -861,7 +856,8 @@
                 required
               />
               <label class="checkbox-label"
-                ><input type="checkbox" class="not-decided-check"/> Doesn't matter</label
+                ><input type="checkbox" class="not-decided-check" /> Doesn't
+                matter</label
               >
             </fieldset>
 

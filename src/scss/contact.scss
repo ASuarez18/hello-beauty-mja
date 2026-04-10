@@ -397,7 +397,7 @@ legend {
 .guest-services-container {
   display: flex;
   flex-direction: column;
-  gap: map.get($spacing, sp-4);
+  gap: map.get($spacing, sp-2);
   margin-top: map.get($spacing, sp-2);
 }
 
@@ -405,8 +405,9 @@ legend {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: map.get($spacing, sp-3) map.get($spacing, sp-4);
   padding-bottom: map.get($spacing, sp-3);
-  border-bottom: 1px solid map.get($colors, d-neut-mid-g);
+  background-color: map-get($colors, l-neut-paper-w);
 
   &:last-child {
     border-bottom: none;
@@ -433,10 +434,10 @@ legend {
 .counter {
   display: flex;
   align-items: center;
-  border: 1px solid map.get($colors, d-neut-mid-g);
-  background: #fff;
+  // border: 1px solid map.get($colors, d-neut-mid-g);
+  background-color: map.get($colors, l-neut-pink);
   height: 40px;
-  margin-right: map.get($spacing, sp-5);
+  margin-right: map.get($spacing, sp-2);
 
   button {
     background: none;
@@ -459,10 +460,9 @@ legend {
   .counter-input {
     width: 40px;
     height: 100%;
+    background: none;
     text-align: center;
     border: none;
-    border-left: 1px solid map.get($colors, d-neut-mid-g);
-    border-right: 1px solid map.get($colors, d-neut-mid-g);
     font-family: map.get($fonts, primary);
     font-size: 16px;
     color: map.get($colors, d-neut-black);
@@ -479,11 +479,22 @@ legend {
   }
 }
 
+.separator {
+	width: 2px;
+	height: 24px;
+	margin-left: map.get($spacing, sp-3);
+	margin-right: map.get($spacing, sp-5);
+	background-color: map.get($colors, accent);
+}
+
 // ========================================================================
 // 8. PARTY CHAT WIDGET
 // ========================================================================
 
 .party-chat-widget {
+	position: fixed;
+	bottom: 50px;
+	right: 0;
   margin-bottom: map.get($spacing, sp-6);
   width: 48px;
 

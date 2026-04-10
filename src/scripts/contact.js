@@ -122,7 +122,7 @@ $(document).ready(function () {
 		const $counterInput = $(this).siblings(".counter-input");
 		let currentValue = parseInt($counterInput.val());
 
-		if ($(this).hasClass("btn-plus")) {
+		if ($(this).hasClass("btn-plus") && currentValue < parseInt($counterInput.attr("max"))) {
 			currentValue += 1;
 		} else if ($(this).hasClass("btn-minus") && currentValue > parseInt($counterInput.attr("min"))) {
 			currentValue -= 1;
