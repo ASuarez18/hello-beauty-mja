@@ -887,3 +887,21 @@ legend {
 		}
 	}
 }
+
+// > Contact input appear animation
+@keyframes fadeInInput {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tel-input, .email-input {
+  animation: fadeInInput 0.3s ease-out forwards !important;
+  margin: map.get($spacing, sp-2) 0 map.get($spacing, sp-3) 0;
+  transition: border-color map.get($transitions, default);
+}

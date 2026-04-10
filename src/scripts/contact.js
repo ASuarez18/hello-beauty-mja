@@ -77,6 +77,32 @@ $(document).ready(function () {
 		$("#step-1-selection").show();
 	});
 
+	//  > Contact Method Radio Buttons (Call, WhatsApp, SMS, Email)
+	const contactRadios = document.querySelectorAll('.mode-selector');
+	const contactTemplates = {
+		call: `<input type="tel" placeholder="+1 Your mobile number" class="input-field tel-input" />`,
+		whatsapp: `<input type="tel" placeholder="+1 Your WhatsApp number" class="input-field tel-input" />`,
+		sms: `<input type="tel" placeholder="+1 Your mobile number for SMS" class="input-field tel-input" />`,
+		email: `<input type="email" placeholder="Your email address" class="input-field email-input" />`
+	};
+
+	contactRadios.forEach(radio => {
+		if (radio.checked && contactTemplates[radio.value]) {
+			radio.closest('.radio-label').insertAdjacentHTML('afterend', contactTemplates[radio.value]);
+		}
+
+		radio.addEventListener('change', () => {
+			const container = radio.closest('.contact-options');
+
+			container.querySelectorAll('.input-field.tel-input, .input-field.email-input').forEach(input => input.remove());
+
+			if (radio.checked && contactTemplates[radio.value]) {
+				const label = radio.closest('.radio-label');
+				label.insertAdjacentHTML('afterend', contactTemplates[radio.value]);
+			}
+		});
+	});
+
 	// --- D. "Submit" Button Logic -> Services Thank You Screen ---
 	// Target the specific submit buttons inside services (excluding the classes submit button)
 	$("#detailedContactForm .btn-submit")
