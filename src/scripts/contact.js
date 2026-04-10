@@ -103,6 +103,20 @@ $(document).ready(function () {
 		});
 	});
 
+	// > Date not decided checkbox logic
+	$(".not-decided-check").on("change", function () {
+		const $section = $(this).closest(".form-section");
+		const $dateInput = $section.find(".date-input, .time-select");
+
+		if ($(this).is(':checked')) {
+			$dateInput.val('');
+			$dateInput.prop('disabled', true);
+			$dateInput.attr('type', 'text');
+		} else {
+			$dateInput.prop('disabled', false);
+		}
+	});
+
 	// --- D. "Submit" Button Logic -> Services Thank You Screen ---
 	// Target the specific submit buttons inside services (excluding the classes submit button)
 	$("#detailedContactForm .btn-submit")

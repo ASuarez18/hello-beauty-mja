@@ -744,10 +744,26 @@ legend {
     transform: translateY(0);
   }
 }
-.tel-input, .email-input {
+.tel-input,
+.email-input {
   animation: fadeInInput 0.3s ease-out forwards !important;
   margin: 8px 0 16px 0;
   transition: border-color all 0.3s ease;
+}
+
+.date-input,
+.time-select {
+  transition: opacity 0.5s ease, background-color 0.5s ease, filter 0.5s ease, border-color 0.5s ease;
+  opacity: 1;
+  filter: grayscale(0%);
+}
+.date-input:disabled,
+.time-select:disabled {
+  opacity: 0.5;
+  background-color: #f8f6f4;
+  filter: grayscale(100%);
+  cursor: not-allowed;
+  border-color: #a3a3a3;
 }
 
 *,
