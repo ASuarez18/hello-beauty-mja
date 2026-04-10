@@ -269,7 +269,54 @@ header {
 // ========================================================================
 
 #beauty-tips {
-	// Add specific beauty tips styles here
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h3 {
+		font-family: map.get($fonts, heading);
+		font-size: map.get(map.get($text-styles, h3), size);
+		font-weight: 300;
+		color: map.get($colors, bold-main);
+		margin-bottom: map.get($spacing, sp-6);
+	}
+
+	#video-collection {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+
+		.video-item {
+			width: 297px;
+			height: 292px;
+			&:hover {
+				filter: brightness(0.7);
+			}
+		}
+	}
+
+	.beauty-tips-btn {
+		display: block;
+		text-align: center;
+		min-width: 160px;
+		margin-top: map.get($spacing, sp-6);
+		padding: map.get($spacing, sp-4) map.get($spacing, sp-5);
+		background: none;
+		border: 1px solid map.get($colors, d-neut-dark-g);
+		font-family: map.get($fonts, primary);
+		font-size: map.get(map.get($text-styles, body-sm), size);
+		color: map.get($colors, d-neut-dark-g);
+		cursor: pointer;
+		transition: map.get($transitions, default);
+		box-sizing: border-box;
+
+		&:hover {
+			background-color: map.get($colors, comp-dark-p);
+			border-color: map.get($colors, comp-dark-p);
+			color: #fff;
+		}
+	}
 }
 
 // ========================================================================
