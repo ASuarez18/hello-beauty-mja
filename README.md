@@ -1,5 +1,9 @@
 # Final Project
 
+## Deployed Link
+
+https://hello-beauty.netlify.app/
+
 **Objective:**
 
 The objective is to create the website using the Figma mockup. Access to the mockup will be shared via email invite, or you may use the link below:
