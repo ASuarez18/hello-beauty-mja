@@ -10,9 +10,9 @@ $(document).ready(function () {
   const $firstLi = $('#navbar ul li').first();
 
   // - Routes
-  const logoOriginal = './assets/imgs/logotype/logotype.svg';
-  const logoScrolled = './assets/imgs/logotype/logotype-small.svg';
-  const iconHam = './assets/icons/hamburger.svg';
+  const logoOriginal = '/assets/imgs/logotype/logotype.svg';
+  const logoScrolled = '/assets/imgs/logotype/logotype-small.svg';
+  const iconHam = '/assets/icons/hamburger.svg';
 
   const originalContent = $firstLi.html();
   // Hamburger menu template
@@ -22,13 +22,13 @@ $(document).ready(function () {
   <div id="mobile-menu-overlay" class="mobile-menu">
       <nav>
           <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./pages/portfolio.html">My Work</a></li>
-              <li><a href="./pages/services.html">Services</a></li>
-              <li><a href="./pages/classes.html">Classes</a></li>
-              <li><a href="./pages/beauty-tips.html">Beauty Tips</a></li>
-              <li><a href="./pages/about.html">About</a></li>
-              <li><a href="./pages/contact.html">Contact</a></li>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/pages/portfolio.html">My Work</a></li>
+              <li><a href="/pages/services.html">Services</a></li>
+              <li><a href="/pages/classes.html">Classes</a></li>
+              <li><a href="/pages/beauty-tips.html">Beauty Tips</a></li>
+              <li><a href="/pages/about.html">About</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
           </ul>
       </nav>
   </div>
